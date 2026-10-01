@@ -5,7 +5,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/100.png"
+    "cover": "covers/10minutestilldawn.jpg",
+    "coverFile": "10minutestilldawn.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/10minutestilldawn.jpg"
   },
   {
     "id": "Arthur's Nightmare",
@@ -13,7 +15,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/312.png"
+    "cover": "covers/arthur_s_nightmare.png",
+    "coverFile": "arthur_s_nightmare.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/arthur_s_nightmare.png"
   },
   {
     "id": "bad time simulator",
@@ -21,7 +25,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/21.png"
+    "cover": "covers/bad_time_simulator.png",
+    "coverFile": "bad_time_simulator.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/bad_time_simulator.png"
   },
   {
     "id": "baldis-basics",
@@ -29,7 +35,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/23.png"
+    "cover": "covers/baldis-basics.jpg",
+    "coverFile": "baldis-basics.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/baldis-basics.jpg"
   },
   {
     "id": "basket random",
@@ -37,7 +45,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/24.png"
+    "cover": "covers/basket_random.jpg",
+    "coverFile": "basket_random.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/basket_random.jpg"
   },
   {
     "id": "basketballstars",
@@ -45,7 +55,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/25.png"
+    "cover": "covers/basketballstars.png",
+    "coverFile": "basketballstars.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/basketballstars.png"
   },
   {
     "id": "blockblast",
@@ -53,7 +65,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/14.png"
+    "cover": "covers/blockblast.png",
+    "coverFile": "blockblast.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/blockblast.png"
   },
   {
     "id": "boxingrandom",
@@ -61,7 +75,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/16.png"
+    "cover": "covers/boxingrandom.jpg",
+    "coverFile": "boxingrandom.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/boxingrandom.jpg"
   },
   {
     "id": "burgers and frights",
@@ -69,7 +85,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/22.png"
+    "cover": "covers/burgers_and_frights.png",
+    "coverFile": "burgers_and_frights.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/burgers_and_frights.png"
   },
   {
     "id": "cluster truck",
@@ -77,7 +95,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/26.png"
+    "cover": "covers/cluster_truck.jpg",
+    "coverFile": "cluster_truck.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/cluster_truck.jpg"
   },
   {
     "id": "crossy road",
@@ -85,7 +105,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/28.png"
+    "cover": "covers/crossy_road.png",
+    "coverFile": "crossy_road.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/crossy_road.png"
   },
   {
     "id": "deltarune",
@@ -93,7 +115,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/456.png"
+    "cover": "covers/deltarune.jpg",
+    "coverFile": "deltarune.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/deltarune.jpg"
   },
   {
     "id": "doom",
@@ -101,7 +125,9 @@
     "category": "Retro",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/164.png"
+    "cover": "covers/doom.jpg",
+    "coverFile": "doom.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/doom.jpg"
   },
   {
     "id": "doom 2",
@@ -109,7 +135,9 @@
     "category": "Retro",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/165.png"
+    "cover": "covers/doom_2.jpg",
+    "coverFile": "doom_2.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/doom_2.jpg"
   },
   {
     "id": "drive-mad",
@@ -117,7 +145,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/7.png"
+    "cover": "covers/drive-mad.jpg",
+    "coverFile": "drive-mad.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/drive-mad.jpg"
   },
   {
     "id": "ducklife1",
@@ -125,7 +155,9 @@
     "category": "Duck Life",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/234.png"
+    "cover": "covers/ducklife1.jpg",
+    "coverFile": "ducklife1.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/ducklife1.jpg"
   },
   {
     "id": "ducklife2",
@@ -133,7 +165,9 @@
     "category": "Duck Life",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/235.png"
+    "cover": "covers/ducklife2.jpg",
+    "coverFile": "ducklife2.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/ducklife2.jpg"
   },
   {
     "id": "ducklife3",
@@ -141,7 +175,9 @@
     "category": "Duck Life",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/236.png"
+    "cover": "covers/ducklife3.jpg",
+    "coverFile": "ducklife3.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/ducklife3.jpg"
   },
   {
     "id": "ducklife4",
@@ -149,7 +185,9 @@
     "category": "Duck Life",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/237.png"
+    "cover": "covers/ducklife4.jpg",
+    "coverFile": "ducklife4.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/ducklife4.jpg"
   },
   {
     "id": "fancypantsadventures",
@@ -157,7 +195,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/36.png"
+    "cover": "covers/fancypantsadventures.jpg",
+    "coverFile": "fancypantsadventures.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fancypantsadventures.jpg"
   },
   {
     "id": "fancypantsadventures2",
@@ -165,7 +205,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/37.png"
+    "cover": "covers/fancypantsadventures2.jpg",
+    "coverFile": "fancypantsadventures2.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fancypantsadventures2.jpg"
   },
   {
     "id": "fancypantsadventures3",
@@ -173,7 +215,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/166.png"
+    "cover": "covers/fancypantsadventures3.jpg",
+    "coverFile": "fancypantsadventures3.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fancypantsadventures3.jpg"
   },
   {
     "id": "fish.",
@@ -181,7 +225,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/82.png"
+    "cover": "covers/fish..png",
+    "coverFile": "fish..png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fish..png"
   },
   {
     "id": "fnac",
@@ -189,7 +235,9 @@
     "category": "Horror",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/186.png"
+    "cover": "covers/fnac.webp",
+    "coverFile": "fnac.webp",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fnac.webp"
   },
   {
     "id": "fnac2",
@@ -197,7 +245,9 @@
     "category": "Horror",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/187.png"
+    "cover": "covers/fnac2.webp",
+    "coverFile": "fnac2.webp",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fnac2.webp"
   },
   {
     "id": "fnaf1",
@@ -205,7 +255,9 @@
     "category": "Horror",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/38.png"
+    "cover": "covers/fnaf1.jpg",
+    "coverFile": "fnaf1.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fnaf1.jpg"
   },
   {
     "id": "fnaf2",
@@ -213,7 +265,9 @@
     "category": "Horror",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/39.png"
+    "cover": "covers/fnaf2.jpg",
+    "coverFile": "fnaf2.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fnaf2.jpg"
   },
   {
     "id": "fnaf3",
@@ -221,7 +275,9 @@
     "category": "Horror",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/40.png"
+    "cover": "covers/fnaf3.jpg",
+    "coverFile": "fnaf3.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fnaf3.jpg"
   },
   {
     "id": "fnaf4",
@@ -229,7 +285,9 @@
     "category": "Horror",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/41.png"
+    "cover": "covers/fnaf4.jpg",
+    "coverFile": "fnaf4.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/fnaf4.jpg"
   },
   {
     "id": "geodash",
@@ -237,7 +295,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/43.png"
+    "cover": "covers/geodash.jpg",
+    "coverFile": "geodash.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/geodash.jpg"
   },
   {
     "id": "gunmayham",
@@ -245,7 +305,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/328.png"
+    "cover": "covers/gunmayham.jpg",
+    "coverFile": "gunmayham.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/gunmayham.jpg"
   },
   {
     "id": "helltaker",
@@ -253,7 +315,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/332.png"
+    "cover": "covers/helltaker.jpg",
+    "coverFile": "helltaker.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/helltaker.jpg"
   },
   {
     "id": "hobo1",
@@ -261,7 +325,9 @@
     "category": "Classics",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/336.png"
+    "cover": "covers/hobo1.jpg",
+    "coverFile": "hobo1.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/hobo1.jpg"
   },
   {
     "id": "hobo2",
@@ -269,7 +335,9 @@
     "category": "Classics",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/337.png"
+    "cover": "covers/hobo2.jpg",
+    "coverFile": "hobo2.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/hobo2.jpg"
   },
   {
     "id": "hobo3",
@@ -277,7 +345,9 @@
     "category": "Classics",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/338.png"
+    "cover": "covers/hobo3.jpg",
+    "coverFile": "hobo3.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/hobo3.jpg"
   },
   {
     "id": "hobo4",
@@ -285,7 +355,9 @@
     "category": "Classics",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/339.png"
+    "cover": "covers/hobo4.jpg",
+    "coverFile": "hobo4.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/hobo4.jpg"
   },
   {
     "id": "hobo5",
@@ -293,7 +365,9 @@
     "category": "Classics",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/340.png"
+    "cover": "covers/hobo5.jpg",
+    "coverFile": "hobo5.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/hobo5.jpg"
   },
   {
     "id": "hobo6",
@@ -301,7 +375,9 @@
     "category": "Classics",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/341.png"
+    "cover": "covers/hobo6.jpg",
+    "coverFile": "hobo6.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/hobo6.jpg"
   },
   {
     "id": "hobo7",
@@ -309,7 +385,9 @@
     "category": "Classics",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/342.png"
+    "cover": "covers/hobo7.jpg",
+    "coverFile": "hobo7.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/hobo7.jpg"
   },
   {
     "id": "houseofhazards",
@@ -317,7 +395,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/52.png"
+    "cover": "covers/houseofhazards.png",
+    "coverFile": "houseofhazards.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/houseofhazards.png"
   },
   {
     "id": "jetpack joy ride",
@@ -325,7 +405,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/56.png"
+    "cover": "covers/jetpack_joy_ride.png",
+    "coverFile": "jetpack_joy_ride.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/jetpack_joy_ride.png"
   },
   {
     "id": "minecraft",
@@ -333,7 +415,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/64.png"
+    "cover": "covers/minecraft.png",
+    "coverFile": "minecraft.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/minecraft.png"
   },
   {
     "id": "minus3",
@@ -341,7 +425,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/23.png"
+    "cover": "covers/minus3.png",
+    "coverFile": "minus3.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/minus3.png"
   },
   {
     "id": "minusB",
@@ -349,7 +435,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/7.png"
+    "cover": "covers/minusb.png",
+    "coverFile": "minusb.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/minusb.png"
   },
   {
     "id": "oneshot",
@@ -357,7 +445,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/360.png"
+    "cover": "covers/oneshot.jpg",
+    "coverFile": "oneshot.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/oneshot.jpg"
   },
   {
     "id": "papasburgeria",
@@ -365,7 +455,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/219.png"
+    "cover": "covers/papasburgeria.jpg",
+    "coverFile": "papasburgeria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papasburgeria.jpg"
   },
   {
     "id": "papascheeseria",
@@ -373,7 +465,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/220.png"
+    "cover": "covers/papascheeseria.jpg",
+    "coverFile": "papascheeseria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papascheeseria.jpg"
   },
   {
     "id": "papasdonuteria",
@@ -381,7 +475,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/222.png"
+    "cover": "covers/papasdonuteria.jpg",
+    "coverFile": "papasdonuteria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papasdonuteria.jpg"
   },
   {
     "id": "papasfreezeria",
@@ -389,7 +485,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/223.png"
+    "cover": "covers/papasfreezeria.jpg",
+    "coverFile": "papasfreezeria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papasfreezeria.jpg"
   },
   {
     "id": "papashotdoggeria",
@@ -397,7 +495,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/224.png"
+    "cover": "covers/papashotdoggeria.jpg",
+    "coverFile": "papashotdoggeria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papashotdoggeria.jpg"
   },
   {
     "id": "papaspancakeria",
@@ -405,7 +505,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/225.png"
+    "cover": "covers/papaspancakeria.jpg",
+    "coverFile": "papaspancakeria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papaspancakeria.jpg"
   },
   {
     "id": "papaspastaria",
@@ -413,7 +515,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/226.png"
+    "cover": "covers/papaspastaria.jpg",
+    "coverFile": "papaspastaria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papaspastaria.jpg"
   },
   {
     "id": "papaspizzeria",
@@ -421,7 +525,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/227.png"
+    "cover": "covers/papaspizzeria.jpg",
+    "coverFile": "papaspizzeria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papaspizzeria.jpg"
   },
   {
     "id": "papassushiria",
@@ -429,7 +535,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/229.png"
+    "cover": "covers/papassushiria.jpg",
+    "coverFile": "papassushiria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papassushiria.jpg"
   },
   {
     "id": "papastacomia",
@@ -437,7 +545,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/230.png"
+    "cover": "covers/papastacomia.jpg",
+    "coverFile": "papastacomia.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papastacomia.jpg"
   },
   {
     "id": "papaswingeria",
@@ -445,7 +555,9 @@
     "category": "Papa's Series",
     "isFlash": true,
     "isPapas": true,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/231.png"
+    "cover": "covers/papaswingeria.jpg",
+    "coverFile": "papaswingeria.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/papaswingeria.jpg"
   },
   {
     "id": "vicecity",
@@ -453,7 +565,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/50.png"
+    "cover": "covers/vicecity.jpg",
+    "coverFile": "vicecity.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/vicecity.jpg"
   },
   {
     "id": "riddleschool1",
@@ -461,7 +575,9 @@
     "category": "Riddle School",
     "isFlash": true,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/287.png"
+    "cover": "covers/riddleschool1.png",
+    "coverFile": "riddleschool1.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/riddleschool1.png"
   },
   {
     "id": "riddleschool2",
@@ -469,7 +585,9 @@
     "category": "Riddle School",
     "isFlash": true,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/288.png"
+    "cover": "covers/riddleschool2.png",
+    "coverFile": "riddleschool2.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/riddleschool2.png"
   },
   {
     "id": "riddleschool3",
@@ -477,7 +595,9 @@
     "category": "Riddle School",
     "isFlash": true,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/289.png"
+    "cover": "covers/riddleschool3.png",
+    "coverFile": "riddleschool3.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/riddleschool3.png"
   },
   {
     "id": "riddleschool4",
@@ -485,7 +605,9 @@
     "category": "Riddle School",
     "isFlash": true,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/290.png"
+    "cover": "covers/riddleschool4.png",
+    "coverFile": "riddleschool4.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/riddleschool4.png"
   },
   {
     "id": "riddleschool5",
@@ -493,7 +615,9 @@
     "category": "Riddle School",
     "isFlash": true,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/291.png"
+    "cover": "covers/riddleschool5.png",
+    "coverFile": "riddleschool5.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/riddleschool5.png"
   },
   {
     "id": "riddletransfer1",
@@ -501,7 +625,9 @@
     "category": "Riddle School",
     "isFlash": true,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/292.png"
+    "cover": "covers/riddletransfer1.png",
+    "coverFile": "riddletransfer1.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/riddletransfer1.png"
   },
   {
     "id": "riddletransfer2",
@@ -509,7 +635,9 @@
     "category": "Riddle School",
     "isFlash": true,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/293.png"
+    "cover": "covers/riddletransfer2.png",
+    "coverFile": "riddletransfer2.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/riddletransfer2.png"
   },
   {
     "id": "tattletail",
@@ -517,7 +645,9 @@
     "category": "Horror",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/383.png"
+    "cover": "covers/tattletail.jpg",
+    "coverFile": "tattletail.jpg",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/tattletail.jpg"
   },
   {
     "id": "bowmasters",
@@ -525,7 +655,9 @@
     "category": "Action",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/0.png"
+    "cover": "covers/bowmasters.png",
+    "coverFile": "bowmasters.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/bowmasters.png"
   },
   {
     "id": "ovo",
@@ -533,7 +665,9 @@
     "category": "Platformer",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/1.png"
+    "cover": "covers/ovo.png",
+    "coverFile": "ovo.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/ovo.png"
   },
   {
     "id": "ovo2",
@@ -541,7 +675,9 @@
     "category": "Platformer",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/2.png"
+    "cover": "covers/ovo2.png",
+    "coverFile": "ovo2.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/ovo2.png"
   },
   {
     "id": "ovo3",
@@ -549,7 +685,9 @@
     "category": "Platformer",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/3.png"
+    "cover": "covers/ovo3.png",
+    "coverFile": "ovo3.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/ovo3.png"
   },
   {
     "id": "gladihoppers",
@@ -557,7 +695,9 @@
     "category": "Fighting",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/4.png"
+    "cover": "covers/gladihoppers.png",
+    "coverFile": "gladihoppers.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/gladihoppers.png"
   },
   {
     "id": "sprunki",
@@ -565,7 +705,9 @@
     "category": "Music",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/9.png"
+    "cover": "covers/sprunki.png",
+    "coverFile": "sprunki.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/sprunki.png"
   },
   {
     "id": "stickmanhook",
@@ -573,6 +715,8 @@
     "category": "Skill",
     "isFlash": false,
     "isPapas": false,
-    "cover": "https://cdn.jsdelivr.net/gh/iamtherealtux/covers-gn@main/11.png"
+    "cover": "covers/stickmanhook.png",
+    "coverFile": "stickmanhook.png",
+    "cdnCover": "https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/covers/stickmanhook.png"
   }
 ]
