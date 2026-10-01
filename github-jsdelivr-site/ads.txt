@@ -1,0 +1,6 @@
+# Monetag / PropellerAds Authorized Digital Sellers
+# To add your publisher ID from your Monetag dashboard, update the line below:
+# propellerads.com, [YOUR_MONETAG_PUBLISHER_ID], DIRECT
+
+contact=admin@bokitware.org
+subdomain=bokitcord.local

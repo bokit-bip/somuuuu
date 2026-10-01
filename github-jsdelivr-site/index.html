@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BokitWare &mdash; Web Arcade &amp; Real-Time Client (jsDelivr CDN Host)</title>
+  <!-- Monetag & Ad Network Verification Meta Tag -->
+  <meta name="monetag" content="98b1c435253398ca0a5c3b6750837cab" id="monetag-meta-tag">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <!-- Monetag Vignette Interstitial Ad Zone (Zone ID: 11930369) -->
+  <script>(function(s){s.dataset.zone='11930369',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-darker: #090b10;
+      --bg-dark: #0f131c;
+      --bg-card: #181d2a;
+      --bg-card-hover: #22293a;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-focus: #5865f2;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --blurple: #5865f2;
+      --blurple-hover: #4752c4;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+      --cyan: #06b6d4;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg-darker);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    /* Top Navigation Bar */
+    header#top-nav {
+      height: 54px;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      z-index: 100;
+      flex-shrink: 0;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #5865f2, #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 16px rgba(88, 101, 242, 0.4);
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-title span.badge {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      font-weight: 700;
+    }
+
+    .nav-tabs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      color: #ffffff;
+      background: var(--blurple);
+      box-shadow: 0 2px 8px rgba(88, 101, 242, 0.4);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Cloud Mode Indicator Pill */
+    .mode-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #a7f3d0;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mode-pill:hover {
+      background: rgba(16, 185, 129, 0.28);
+      border-color: #34d399;
+      color: #ffffff;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* Main Content Area */
+    main#content-viewport {
+      flex: 1;
+      width: 100%;
+      height: calc(100% - 54px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .view-panel {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .view-panel.active {
+      display: flex;
+    }
+
+    /* =========================================
+       ARCADE VIEW
+       ========================================= */
+    #view-arcade {
+      background: var(--bg-darker);
+    }
+
+    .arcade-subbar {
+      padding: 12px 20px;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .arcade-title-group h2 {
+      font-size: 17px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .arcade-title-group p {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    .arcade-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      max-width: 600px;
+      justify-content: flex-end;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+      max-width: 320px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 12px 8px 34px;
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-box input:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 10px rgba(88, 101, 242, 0.3);
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+
+    .categories-bar {
+      padding: 10px 20px;
+      background: rgba(15, 19, 28, 0.7);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .categories-bar::-webkit-scrollbar { display: none; }
+
+    .cat-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .cat-pill:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .cat-pill.active {
+      background: var(--blurple);
+      color: white;
+      border-color: var(--blurple);
+      box-shadow: 0 2px 8px rgba(88, 101, 242, 0.4);
+    }
+
+    .games-grid-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 16px;
+    }
+
+    .game-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .game-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(88, 101, 242, 0.5);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), 0 0 12px rgba(88, 101, 242, 0.2);
+    }
+
+    .game-thumb-wrapper {
+      width: 100%;
+      height: 120px;
+      background: #111520;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .game-placeholder-icon {
+      font-size: 38px;
+      opacity: 0.8;
+    }
+
+    .game-tag-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      text-transform: uppercase;
+    }
+
+    .game-tag-badge.papas {
+      color: #fbbf24;
+      border-color: rgba(251, 191, 36, 0.4);
+    }
+
+    .game-tag-badge.riddle {
+      color: #34d399;
+      border-color: rgba(52, 211, 153, 0.4);
+    }
+
+    .game-info {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .game-title {
+      font-weight: 700;
+      font-size: 13.5px;
+      line-height: 1.3;
+      margin-bottom: 4px;
+      color: var(--text-main);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    .game-category {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .btn-play-card {
+      width: 100%;
+      background: rgba(88, 101, 242, 0.15);
+      border: 1px solid rgba(88, 101, 242, 0.35);
+      color: #818cf8;
+      padding: 6px 0;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .game-card:hover .btn-play-card {
+      background: var(--blurple);
+      border-color: var(--blurple);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(88, 101, 242, 0.4);
+    }
+
+    /* Modal Game Player View */
+    #modal-game-player {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: #06080d;
+      z-index: 200;
+      display: none;
+      flex-direction: column;
+    }
+
+    #modal-game-player.active {
+      display: flex;
+    }
+
+    .player-header {
+      height: 48px;
+      background: #0f131c;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      flex-shrink: 0;
+    }
+
+    .player-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-player-back {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-player-back:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .player-game-title {
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .player-source-badge {
+      font-size: 11px;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .player-right-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cheat-100-btn {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+      display: none;
+      align-items: center;
+      gap: 6px;
+    }
+    .cheat-100-btn:hover {
+      filter: brightness(1.1);
+    }
+
+    .btn-ctrl {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .btn-ctrl:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .player-iframe-container {
+      flex: 1;
+      width: 100%;
+      height: calc(100% - 48px);
+      position: relative;
+      background: #000000;
+    }
+
+    #game-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Player Loading Spinner */
+    #player-loading-spinner {
+      position: absolute;
+      inset: 0;
+      background: #090b10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: #94a3b8;
+      font-size: 14px;
+      z-index: 10;
+      transition: opacity 0.3s ease;
+    }
+
+    .spinner {
+      width: 42px;
+      height: 42px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-top-color: #5865f2;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* =========================================
+       BOKITCORD CLIENT VIEW
+       ========================================= */
+    #view-bokitcord {
+      background: #0f131c;
+      flex-direction: column;
+    }
+
+    .bokitcord-frame-container {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: #0b0e14;
+    }
+
+    #bokitcord-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Standalone Offline Fallback Preview */
+    .offline-client-preview {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background: #141720;
+    }
+
+    .mock-sidebar {
+      width: 240px;
+      background: #0f131c;
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      gap: 16px;
+    }
+
+    .mock-server-header {
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mock-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mock-channel-item {
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .mock-channel-item:hover, .mock-channel-item.active {
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+    }
+    .mock-channel-item.active {
+      background: rgba(88, 101, 242, 0.2);
+      color: #818cf8;
+      font-weight: 600;
+    }
+
+    .mock-chat-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #141720;
+    }
+
+    .mock-chat-header {
+      height: 48px;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .mock-messages-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .mock-msg {
+      display: flex;
+      gap: 12px;
+      line-height: 1.4;
+    }
+
+    .mock-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ec4899, #8b5cf6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .mock-msg-content {
+      flex: 1;
+    }
+
+    .mock-msg-author {
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mock-badge {
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 4px;
+      background: var(--blurple);
+      color: white;
+      font-weight: 700;
+    }
+    .mock-msg-text {
+      font-size: 13.5px;
+      color: #cbd5e1;
+    }
+
+    .mock-embed {
+      margin-top: 8px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 4px solid var(--blurple);
+      border-radius: 6px;
+      padding: 10px 14px;
+      max-width: 480px;
+      font-size: 12.5px;
+    }
+
+    .mock-input-bar {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      gap: 10px;
+    }
+    .mock-input-bar input {
+      flex: 1;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+    }
+    .mock-input-bar input:focus {
+      border-color: var(--blurple);
+    }
+
+    /* =========================================
+       SETTINGS & JSDELIVR BUILDER VIEW
+       ========================================= */
+    #view-settings {
+      background: var(--bg-darker);
+      overflow-y: auto;
+      padding: 30px;
+    }
+
+    .settings-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .settings-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .settings-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .settings-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .cloaker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .btn-cloak {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+    .btn-cloak:hover {
+      background: rgba(88, 101, 242, 0.2);
+      border-color: #818cf8;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+
+    .form-group input {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 7px;
+      padding: 9px 12px;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .form-group input:focus {
+      border-color: var(--blurple);
+    }
+
+    .output-link-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(88, 101, 242, 0.3);
+      border-radius: 8px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .output-link-box code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      color: #38bdf8;
+      word-break: break-all;
+    }
+
+    /* Toast Notification */
+    #toast-msg {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #000;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 9999;
+      pointer-events: none;
+    }
+    #toast-msg.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    /* Game Interstitial Preroll Ad Overlay (Triggered ONLY on new game click) */
+    .game-interstitial-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 80;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .interstitial-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 10, 15, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .interstitial-modal {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 580px;
+      background: #111420;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(88, 101, 242, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .interstitial-top-bar {
+      padding: 14px 20px;
+      background: rgba(15, 19, 30, 0.85);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .interstitial-game-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 14.5px;
+      color: #fff;
+    }
+
+    .interstitial-badge-icon {
+      font-size: 18px;
+    }
+
+    .interstitial-tag {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      background: rgba(245, 158, 11, 0.18);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 6px;
+      color: #fbbf24;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .interstitial-ad-stage {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .monetag-ad-slot {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .ad-stage-card {
+      width: 100%;
+      max-width: 480px;
+      min-height: 180px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px dashed rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .ad-network-label {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #64748b;
+    }
+
+    .ad-pulse-visual {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(88, 101, 242, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .ad-pulse-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid #5865f2;
+      opacity: 0.6;
+      animation: adPulse 2s infinite ease-out;
+    }
+
+    @keyframes adPulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 0.2; }
+      100% { transform: scale(0.9); opacity: 0.8; }
+    }
+
+    .ad-pulse-icon {
+      font-size: 22px;
+    }
+
+    .ad-sponsor-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .ad-sponsor-desc {
+      font-size: 12.5px;
+      color: #94a3b8;
+      max-width: 380px;
+      line-height: 1.45;
+    }
+
+    .interstitial-bottom-bar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .interstitial-progress-track {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .interstitial-progress-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #5865f2, #10b981);
+      border-radius: 999px;
+      transition: width 5s linear;
+    }
+
+    .interstitial-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .interstitial-timer-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #94a3b8;
+    }
+
+    .interstitial-timer-label strong {
+      color: #fff;
+    }
+
+    .btn-skip-game-ad {
+      background: #5865f2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-skip-game-ad:hover:not(:disabled) {
+      background: #4752c4;
+      box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .btn-skip-game-ad:disabled {
+      background: rgba(255, 255, 255, 0.08);
+      color: #64748b;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Compliance Footer */
+    .arcade-compliance-footer {
+      margin-top: 36px;
+      padding: 20px 0 10px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      width: 100%;
+    }
+
+    .arcade-compliance-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    .compliance-brand {
+      font-weight: 500;
+    }
+
+    .compliance-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .compliance-link-btn {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+
+    .compliance-link-btn:hover {
+      color: #5865f2;
+    }
+
+    .compliance-sep {
+      color: #475569;
+      font-size: 11px;
+    }
+
+    /* Legal Modals */
+    .modal-legal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .legal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(5px);
+    }
+
+    .legal-card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 640px;
+      max-height: 85vh;
+      background: #0f131c;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .legal-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #141925;
+    }
+
+    .legal-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-close-legal {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .legal-body {
+      padding: 20px;
+      overflow-y: auto;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .legal-body h4 {
+      font-size: 14.5px;
+      color: #fff;
+      margin: 16px 0 6px 0;
+    }
+
+    .legal-body p {
+      margin-bottom: 10px;
+    }
+
+    .legal-body ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    .legal-body li {
+      margin-bottom: 6px;
+    }
+
+    .legal-effective-date {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .legal-footer {
+      padding: 12px 20px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: flex-end;
+      background: #141925;
+    }
+
+    /* Monetag Settings Styling */
+    .monetag-status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    .status-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      display: inline-block;
+    }
+
+    .monetag-status-badge {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: #10b981;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header id="top-nav">
+    <div class="brand-section">
+      <div class="brand-logo">B</div>
+      <div class="brand-title">
+        BokitWare
+        <span class="badge">☁️ Cloud Arcade</span>
+      </div>
+    </div>
+
+    <nav class="nav-tabs" aria-label="Main Navigation">
+      <button class="tab-btn active" data-tab="arcade">
+        <span>🕹️</span> Arcade (65)
+      </button>
+      <button class="tab-btn" data-tab="bokitcord">
+        <span>💬</span> BokitCord Client
+      </button>
+      <button class="tab-btn" data-tab="settings">
+        <span>⚙️</span> jsDelivr &amp; Settings
+      </button>
+    </nav>
+
+    <div class="top-actions">
+      <!-- Cloud Arcade Status Pill -->
+      <div class="mode-pill" id="arcade-mode-pill" title="Arcade runs 100% in the cloud without localhost!">
+        <span class="status-dot"></span>
+        <span>☁️ Cloud Mode (No Localhost)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="content-viewport">
+
+    <!-- 1. ARCADE PANEL -->
+    <section id="view-arcade" class="view-panel active">
+      <div class="arcade-subbar">
+        <div class="arcade-title-group">
+          <h2>🕹️ BokitWare Game Arcade</h2>
+          <p>65 unblocked HTML5 and Flash titles running 100% in-browser over Cloud CDN</p>
+        </div>
+        <div class="arcade-controls">
+          <div class="search-box">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="game-search-input" placeholder="Search 65 games..." autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories Filter -->
+      <div class="categories-bar">
+        <button class="cat-pill active" data-cat="all">All (65)</button>
+        <button class="cat-pill" data-cat="Riddle School">🏫 Riddle School (7)</button>
+        <button class="cat-pill" data-cat="Papa's Series">Papa's (11)</button>
+        <button class="cat-pill" data-cat="Duck Life">Duck Life (4)</button>
+        <button class="cat-pill" data-cat="Horror">Horror &amp; FNAF</button>
+        <button class="cat-pill" data-cat="Action">Action</button>
+        <button class="cat-pill" data-cat="Retro">Retro &amp; Classics</button>
+      </div>
+
+      <!-- Games Grid -->
+      <div class="games-grid-container">
+        <div class="games-grid" id="games-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Compliance & Legal Footer -->
+        <footer class="arcade-compliance-footer">
+          <div class="arcade-compliance-inner">
+            <div class="compliance-brand">
+              &copy; 2026 BokitWare &bull; Educational Web Development &amp; Cloud Sandbox
+            </div>
+            <div class="compliance-links">
+              <button type="button" class="compliance-link-btn" id="btn-open-privacy">Privacy &amp; Advertising</button>
+              <span class="compliance-sep">&bull;</span>
+              <button type="button" class="compliance-link-btn" id="btn-open-terms">Terms of Service</button>
+              <span class="compliance-sep">&bull;</span>
+              <button type="button" class="compliance-link-btn" id="btn-open-monetag">Monetag Settings</button>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Modal Game Player -->
+      <div id="modal-game-player">
+        <div class="player-header">
+          <div class="player-left">
+            <button class="btn-player-back" id="btn-close-player">
+              &larr; Back to Arcade
+            </button>
+            <div class="player-game-title" id="player-title">Playing Game</div>
+            <div class="player-source-badge">☁️ Cloud CDN</div>
+          </div>
+          <div class="player-right-controls">
+            <button class="btn-ctrl" id="btn-player-reload" title="Reload Game">
+              ↻ Reload
+            </button>
+            <button class="cheat-100-btn" id="btn-toggle-cheat100" title="Toggle 100% Customer Satisfaction Easter Egg">
+              ✨ 100% Score Cheat
+            </button>
+            <button class="btn-ctrl" id="btn-fullscreen-player">
+              ⛶ Fullscreen
+            </button>
+          </div>
+        </div>
+        <div class="player-iframe-container">
+          <div id="player-loading-spinner">
+            <div class="spinner"></div>
+            <div id="spinner-label">Loading game from Cloud CDN...</div>
+          </div>
+          <!-- Game Interstitial Preroll Ad (Triggers ONLY when clicking to play a game) -->
+          <div id="game-interstitial-overlay" class="game-interstitial-overlay" style="display:none;" aria-label="Game Interstitial Advertisement">
+            <div class="interstitial-backdrop"></div>
+            <div class="interstitial-modal">
+              <div class="interstitial-top-bar">
+                <div class="interstitial-game-info">
+                  <span class="interstitial-badge-icon">🎮</span>
+                  <span id="interstitial-game-name" class="interstitial-game-name">Loading Game...</span>
+                </div>
+                <div class="interstitial-tag">
+                  <span>📢</span> SPONSORED AD
+                </div>
+              </div>
+
+              <div class="interstitial-ad-stage">
+                <div id="monetag-ad-slot" class="monetag-ad-slot">
+                  <a id="ad-direct-link-card" href="https://omg10.com/4/11930399" target="_blank" rel="noopener noreferrer" class="ad-stage-card ad-sponsor-clickable" style="text-decoration:none;display:flex;">
+                    <div class="ad-network-label">MONETAG SPONSOR &bull; ZONE 11930399</div>
+                    <div class="ad-pulse-visual">
+                      <span class="ad-pulse-ring"></span>
+                      <span class="ad-pulse-icon">⚡</span>
+                    </div>
+                    <h4 class="ad-sponsor-title">Featured Sponsor Offer</h4>
+                    <p class="ad-sponsor-desc">
+                      Support 100% free unblocked gaming! Click below to explore today's special sponsor deal.
+                    </p>
+                    <div class="ad-cta-button-wrap" style="margin-top:14px;">
+                      <span class="btn-ad-visit" style="background:linear-gradient(135deg, #5865f2, #4752c4);color:#fff;font-size:13px;font-weight:700;padding:8px 20px;border-radius:8px;box-shadow:0 4px 14px rgba(88,101,242,0.45);display:inline-flex;align-items:center;gap:6px;">Explore Sponsor Offer &rarr;</span>
+                    </div>
+                    <div id="monetag-banner-injection" class="monetag-banner-injection"></div>
+                  </a>
+                </div>
+
+                <div class="interstitial-bottom-bar">
+                  <div class="interstitial-progress-track">
+                    <div id="interstitial-progress-fill" class="interstitial-progress-fill"></div>
+                  </div>
+                  <div class="interstitial-controls">
+                    <span id="interstitial-timer-label" class="interstitial-timer-label">Game starts in <strong>5</strong>s...</span>
+                    <button type="button" id="btn-skip-game-ad" class="btn-skip-game-ad" disabled>
+                      <span>Skip Ad &rarr;</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <iframe id="game-frame" allow="autoplay; fullscreen; gamepad; clipboard-read; clipboard-write"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. BOKITCORD CLIENT PANEL -->
+    <section id="view-bokitcord" class="view-panel">
+      <div class="bokitcord-frame-container">
+        <div id="offline-fallback" class="offline-client-preview">
+          <div class="mock-sidebar">
+            <div class="mock-server-header">
+              <span>🚀</span> BokitCord Standalone
+            </div>
+            <div class="mock-channels">
+              <div class="mock-channel-item active"># general</div>
+              <div class="mock-channel-item"># game-arcade</div>
+              <div class="mock-channel-item"># cheats-and-secrets</div>
+              <div class="mock-channel-item"># dev-announcements</div>
+            </div>
+          </div>
+          <div class="mock-chat-area">
+            <div class="mock-chat-header">
+              <span>#</span> general &mdash; Standalone jsDelivr Client
+            </div>
+            <div class="mock-messages-list" id="mock-msg-container">
+              <div class="mock-msg">
+                <div class="mock-avatar">B</div>
+                <div class="mock-msg-content">
+                  <div class="mock-msg-author">
+                    bokit <span class="mock-badge">SYSTEM / ADMIN</span>
+                  </div>
+                  <div class="mock-msg-text">
+                    Welcome to BokitCord running from a single SVG file over jsDelivr!
+                  </div>
+                  <div class="mock-embed">
+                    <strong>🎮 65 Cloud Arcade Games Ready</strong><br>
+                    All 65 games are connected directly to Cloud CDNs &mdash; no localhost server or command-line setup is needed!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mock-input-bar">
+              <input type="text" id="mock-input" placeholder="Type a message in standalone demo mode...">
+              <button class="btn-primary" id="btn-mock-send" style="background:#5865f2;color:#fff;border:none;padding:8px 14px;border-radius:6px;font-weight:600;cursor:pointer;">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SETTINGS & JSDELIVR PANEL -->
+    <section id="view-settings" class="view-panel">
+      <div class="settings-container">
+        
+        <!-- Tab Cloaker / Disguise Card (like froggies.svg) -->
+        <div class="settings-card">
+          <h3>🎭 Tab Cloaker &amp; Disguise</h3>
+          <p>
+            Disguise this browser tab as an educational site so teachers, bosses, or network monitors only see normal schoolwork:
+          </p>
+          <div class="cloaker-grid">
+            <button class="btn-cloak" data-cloak="classroom">
+              <span>🏫</span> Google Classroom
+            </button>
+            <button class="btn-cloak" data-cloak="drive">
+              <span>📁</span> Google Drive
+            </button>
+            <button class="btn-cloak" data-cloak="ixl">
+              <span>📐</span> IXL Learning
+            </button>
+            <button class="btn-cloak" data-cloak="canvas">
+              <span>🎨</span> Canvas LMS
+            </button>
+            <button class="btn-cloak" data-cloak="edpuzzle">
+              <span>🧩</span> Edpuzzle
+            </button>
+            <button class="btn-cloak" data-cloak="none">
+              <span>👾</span> Reset to Default
+            </button>
+          </div>
+        </div>
+
+        <!-- Cloud Architecture Card -->
+        <div class="settings-card">
+          <h3>☁️ Zero-Localhost Cloud Architecture</h3>
+          <p>
+            This arcade runs <strong>100% in the cloud</strong>. All 65 HTML5 and Flash games stream directly from high-speed, CORS-enabled Content Delivery Networks (jsDelivr, GitHub Pages, and Ruffle WebAssembly).
+          </p>
+          <p style="color:#10b981;font-weight:600;line-height:1.6;">
+            ✓ No Node.js server required<br>
+            ✓ No port forwarding or tunnels needed<br>
+            ✓ Works on Chromebooks, phones, and school networks anywhere<br>
+            ✓ Instant 0.1-second SVG boot speed via <code>decodeURIComponent</code>
+          </p>
+        </div>
+
+        <!-- jsDelivr Generator Card -->
+        <div class="settings-card">
+          <h3>⚡ jsDelivr CDN Host Generator</h3>
+          <p>
+            When you push this repository to GitHub, jsDelivr serves the SVG file with <code>image/svg+xml</code> headers and CORS allowed, transforming it into a full interactive web application!
+          </p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>GitHub Username</label>
+              <input type="text" id="gh-user-input" value="bokit-bip" placeholder="e.g. bokit-bip">
+            </div>
+            <div class="form-group">
+              <label>Repository Name</label>
+              <input type="text" id="gh-repo-input" value="somuuuu" placeholder="e.g. somuuuu">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Branch / Tag</label>
+            <input type="text" id="gh-branch-input" value="main" style="max-width:200px;">
+          </div>
+
+          <div style="margin-top:16px;">
+            <label style="font-size:12px;font-weight:600;color:var(--text-dim);text-transform:uppercase;">Your Live jsDelivr URL</label>
+            <div class="output-link-box">
+              <code id="jsdelivr-direct-link">https://cdn.jsdelivr.net/gh/bokit-bip/somuuuu@main/jsdelivr-svg/bokitcord.svg</code>
+              <button class="btn-primary" id="btn-copy-jsdelivr" style="background:#5865f2;color:#fff;border:none;padding:6px 12px;border-radius:6px;font-weight:600;cursor:pointer;">Copy Link</button>
+            </div>
+          </div>
+        <!-- Monetag Ads & Site Verification Card -->
+        <div class="settings-card" id="monetag-card">
+          <h3>💰 Monetag Ads &amp; Site Verification</h3>
+          <div class="monetag-status-row">
+            <div class="status-left">
+              <span class="status-indicator-dot"></span>
+              <span class="status-text" style="font-size:12.5px;font-weight:600;color:#cbd5e1;">Site Verification Status:</span>
+            </div>
+            <span id="monetag-status-badge" class="monetag-status-badge">Ready for Monetag Verification</span>
+          </div>
+
+          <p style="font-size:12.5px;color:var(--text-muted);margin-bottom:12px;line-height:1.45;">
+            <strong>🎯 Game-Only Ad Rule:</strong> Ads are strictly configured to trigger <em>only when clicking on a new game to play</em>. Navigation, chat, and settings are completely ad-free.
+          </p>
+
+          <div class="form-group" style="margin-bottom:12px;">
+            <label style="font-size:12px;font-weight:700;color:#cbd5e1;">1. Monetag Site Verification Code</label>
+            <input type="text" id="monetag-input-tag" value="98b1c435253398ca0a5c3b6750837cab" placeholder="e.g. 98b1c435253398ca0a5c3b6750837cab">
+            <small style="font-size:11px;color:#64748b;">This code is placed into <code>&lt;meta name="monetag" content="..."&gt;</code> in the <code>&lt;head&gt;</code> for instant Monetag approval.</small>
+          </div>
+
+          <div class="form-group" style="margin-bottom:12px;">
+            <label style="font-size:12px;font-weight:700;color:#cbd5e1;">2. Monetag Interstitial Tag / Zone ID</label>
+            <input type="text" id="monetag-input-zone" placeholder="e.g. 8821034 or https://alwingulla.com/88/tag.min.js">
+            <small style="font-size:11px;color:#64748b;">Monetag's Interstitial or In-Page Push script tag for game prerolls.</small>
+          </div>
+
+          <div class="form-group" style="margin-bottom:14px;">
+            <label style="font-size:12px;font-weight:700;color:#cbd5e1;">3. Monetag DirectLink / SmartLink</label>
+            <input type="text" id="monetag-input-direct" value="https://omg10.com/4/11930399" placeholder="https://omg10.com/4/11930399">
+            <small style="font-size:11px;color:#64748b;">Direct link for interstitial sponsor offers (bypasses router adblockers).</small>
+          </div>
+
+          <div class="form-group" style="display:flex;align-items:center;gap:10px;margin-bottom:14px;background:rgba(255,255,255,0.03);padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);">
+            <input type="checkbox" id="monetag-input-auto-open" checked style="width:18px;height:18px;cursor:pointer;">
+            <label for="monetag-input-auto-open" style="margin:0;cursor:pointer;font-size:12px;font-weight:600;color:#fff;">
+              🚀 Auto-open sponsor in new tab on game launch (Guaranteed Revenue)
+            </label>
+          </div>
+
+          <div style="display:flex;gap:10px;margin-top:14px;">
+            <button class="btn-primary" id="btn-save-monetag" style="background:#10b981;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">💾 Save &amp; Apply</button>
+            <button class="btn-ctrl" id="btn-preview-game-ad" style="background:rgba(255,255,255,0.08);border:1px solid var(--border-color);color:#fff;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">▶ Preview Game Ad</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modal: Privacy Policy & Advertising Disclosure -->
+    <div id="modal-privacy" class="modal-legal" style="display:none;">
+      <div class="legal-backdrop" id="backdrop-privacy"></div>
+      <div class="legal-card">
+        <div class="legal-header">
+          <div class="legal-title-wrap">
+            <span style="font-size:18px;">🛡️</span>
+            <h3 style="font-size:16px;font-weight:700;color:#fff;">Privacy Policy &amp; Advertising Disclosure</h3>
+          </div>
+          <button class="btn-close-legal" id="btn-close-privacy">&times;</button>
+        </div>
+        <div class="legal-body custom-scrollbar">
+          <p class="legal-effective-date"><strong>Effective Date:</strong> January 1, 2026 &bull; <strong>Platform:</strong> BokitWare Cloud Arcade</p>
+          <h4>1. Overview &amp; Educational Purpose</h4>
+          <p>BokitWare is committed to transparency and user privacy. This Privacy Policy explains our data collection, local storage use, and advertising network partnerships (including Monetag by PropellerAds) when you access our 65+ games and cloud services.</p>
+          <h4>2. Information We Collect</h4>
+          <p>We maintain a minimal data footprint. No personal identifying information is collected or sold. Local storage is used strictly to remember your preferences and game save states.</p>
+          <h4>3. Third-Party Advertising &amp; Monetag Network</h4>
+          <p>BokitWare partners with <strong>Monetag</strong> (operated by PropellerAds) to monetize our gaming catalog so that games remain 100% free to all players.</p>
+          <ul>
+            <li><strong>Game Preroll Ads:</strong> Advertisements are strictly limited to game launches. When clicking on a game card, a 5-second sponsor interstitial ad displays prior to the game loading.</li>
+            <li><strong>Zero Navigation Ads:</strong> Normal site navigation, category browsing, searching, and settings never trigger ads.</li>
+            <li><strong>Ad Technology:</strong> Advertising partners may employ cookies, web beacons, and unique mobile/browser advertising identifiers to serve relevant, non-intrusive ads and calculate publisher impressions.</li>
+          </ul>
+          <h4>4. Contact</h4>
+          <p>For questions regarding this policy, contact <a href="mailto:admin@bokitware.org" style="color:#5865f2;">admin@bokitware.org</a>.</p>
+        </div>
+        <div class="legal-footer">
+          <button class="btn-primary" id="btn-got-it-privacy" style="background:#5865f2;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">Got It</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Terms of Service -->
+    <div id="modal-terms" class="modal-legal" style="display:none;">
+      <div class="legal-backdrop" id="backdrop-terms"></div>
+      <div class="legal-card">
+        <div class="legal-header">
+          <div class="legal-title-wrap">
+            <span style="font-size:18px;">📜</span>
+            <h3 style="font-size:16px;font-weight:700;color:#fff;">Terms of Service &amp; Fair Use</h3>
+          </div>
+          <button class="btn-close-legal" id="btn-close-terms">&times;</button>
+        </div>
+        <div class="legal-body custom-scrollbar">
+          <p class="legal-effective-date"><strong>Last Updated:</strong> January 2026</p>
+          <h4>1. Acceptance of Terms</h4>
+          <p>By accessing BokitWare games or standalone cloud bundles, you agree to comply with these Terms of Service and all applicable laws.</p>
+          <h4>2. Educational &amp; Preservation Fair Use</h4>
+          <p>The arcade titles hosted within BokitWare are preserved for digital computer history, WebAssembly performance evaluation, and non-commercial educational demonstration under Fair Use doctrine.</p>
+          <h4>3. Disclaimer of Warranties</h4>
+          <p>All games and emulator runtimes (including Ruffle and WebGL) are provided "AS IS" without warranty of continuous uptime or data persistence.</p>
+        </div>
+        <div class="legal-footer">
+          <button class="btn-primary" id="btn-got-it-terms" style="background:#5865f2;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">Close</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="toast-msg">Notification</div>
+
+  <script>
+    // Embedded Games Catalog
+    const ALL_GAMES = [{"id": "10minutestilldawn", "title": "10minutestilldawn", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "Arthur's Nightmare", "title": "Arthur's Nightmare", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "bad time simulator", "title": "bad time simulator", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "baldis-basics", "title": "baldis-basics", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "basket random", "title": "basket random", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "basketballstars", "title": "basketballstars", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "blockblast", "title": "blockblast", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "boxingrandom", "title": "boxingrandom", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "burgers and frights", "title": "burgers and frights", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "cluster truck", "title": "cluster truck", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "crossy road", "title": "crossy road", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "deltarune", "title": "deltarune", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "doom", "title": "doom", "category": "Retro", "isFlash": false, "isPapas": false}, {"id": "doom 2", "title": "doom 2", "category": "Retro", "isFlash": false, "isPapas": false}, {"id": "drive-mad", "title": "drive-mad", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "ducklife1", "title": "Duck Life", "category": "Duck Life", "isFlash": false, "isPapas": false}, {"id": "ducklife2", "title": "Duck Life 2: World Champion", "category": "Duck Life", "isFlash": false, "isPapas": false}, {"id": "ducklife3", "title": "Duck Life 3: Evolution", "category": "Duck Life", "isFlash": false, "isPapas": false}, {"id": "ducklife4", "title": "Duck Life 4", "category": "Duck Life", "isFlash": false, "isPapas": false}, {"id": "fancypantsadventures", "title": "fancypantsadventures", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "fancypantsadventures2", "title": "fancypantsadventures2", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "fancypantsadventures3", "title": "fancypantsadventures3", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "fish.", "title": "fish.", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "fnac", "title": "fnac", "category": "Horror", "isFlash": false, "isPapas": false}, {"id": "fnac2", "title": "fnac2", "category": "Horror", "isFlash": false, "isPapas": false}, {"id": "fnaf1", "title": "fnaf1", "category": "Horror", "isFlash": false, "isPapas": false}, {"id": "fnaf2", "title": "fnaf2", "category": "Horror", "isFlash": false, "isPapas": false}, {"id": "fnaf3", "title": "fnaf3", "category": "Horror", "isFlash": false, "isPapas": false}, {"id": "fnaf4", "title": "fnaf4", "category": "Horror", "isFlash": false, "isPapas": false}, {"id": "geodash", "title": "geodash", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "gunmayham", "title": "gunmayham", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "helltaker", "title": "helltaker", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "hobo1", "title": "hobo1", "category": "Classics", "isFlash": false, "isPapas": false}, {"id": "hobo2", "title": "hobo2", "category": "Classics", "isFlash": false, "isPapas": false}, {"id": "hobo3", "title": "hobo3", "category": "Classics", "isFlash": false, "isPapas": false}, {"id": "hobo4", "title": "hobo4", "category": "Classics", "isFlash": false, "isPapas": false}, {"id": "hobo5", "title": "hobo5", "category": "Classics", "isFlash": false, "isPapas": false}, {"id": "hobo6", "title": "hobo6", "category": "Classics", "isFlash": false, "isPapas": false}, {"id": "hobo7", "title": "hobo7", "category": "Classics", "isFlash": false, "isPapas": false}, {"id": "houseofhazards", "title": "houseofhazards", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "jetpack joy ride", "title": "jetpack joy ride", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "minecraft", "title": "minecraft", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "minus3", "title": "minus3", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "minusB", "title": "minusB", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "oneshot", "title": "oneshot", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "papasburgeria", "title": "Papa's Burgeria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papascheeseria", "title": "Papa's Cheeseria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papasdonuteria", "title": "Papa's Donuteria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papasfreezeria", "title": "Papa's Freezeria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papashotdoggeria", "title": "Papa's Hot Doggeria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papaspancakeria", "title": "Papa's Pancakeria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papaspastaria", "title": "Papa's Pastaria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papaspizzeria", "title": "Papa's Pizzeria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papassushiria", "title": "Papa's Sushiria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papastacomia", "title": "Papa's Taco Mia!", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "papaswingeria", "title": "Papa's Wingeria", "category": "Papa's Series", "isFlash": true, "isPapas": true}, {"id": "vicecity", "title": "vicecity", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "riddleschool1", "title": "Riddle School", "category": "Riddle School", "isFlash": true, "isPapas": false}, {"id": "riddleschool2", "title": "Riddle School 2", "category": "Riddle School", "isFlash": true, "isPapas": false}, {"id": "riddleschool3", "title": "Riddle School 3", "category": "Riddle School", "isFlash": true, "isPapas": false}, {"id": "riddleschool4", "title": "Riddle School 4", "category": "Riddle School", "isFlash": true, "isPapas": false}, {"id": "riddleschool5", "title": "Riddle School 5", "category": "Riddle School", "isFlash": true, "isPapas": false}, {"id": "riddletransfer1", "title": "Riddle Transfer", "category": "Riddle School", "isFlash": true, "isPapas": false}, {"id": "riddletransfer2", "title": "Riddle Transfer 2", "category": "Riddle School", "isFlash": true, "isPapas": false}, {"id": "tattletail", "title": "Tattletail", "category": "Horror", "isFlash": false, "isPapas": false}, {"id": "bowmasters", "title": "Bowmasters", "category": "Action", "isFlash": false, "isPapas": false}, {"id": "ovo", "title": "OvO", "category": "Platformer", "isFlash": false, "isPapas": false}, {"id": "ovo2", "title": "OvO 2", "category": "Platformer", "isFlash": false, "isPapas": false}, {"id": "ovo3", "title": "OvO 3 Dimensions", "category": "Platformer", "isFlash": false, "isPapas": false}, {"id": "gladihoppers", "title": "Gladihoppers", "category": "Fighting", "isFlash": false, "isPapas": false}, {"id": "sprunki", "title": "Sprunki", "category": "Music", "isFlash": false, "isPapas": false}, {"id": "stickmanhook", "title": "Stickman Hook", "category": "Skill", "isFlash": false, "isPapas": false}];
+
+    // Cloud Games Mapping (Direct CDN URLs - NO LOCALHOST NEEDED!)
+    const CLOUD_GAMES = {"10minutestilldawn": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cl10minutestildawn.html"}, "Arthur's Nightmare": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clarthursnightmare.html"}, "bad time simulator": {"type": "iframe", "url": "https://jcw87.github.io/c2-sans-fight/"}, "baldis-basics": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clbaldisbasics.html"}, "basket random": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clbasketrandom.html"}, "basketballstars": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clbasketballstars.html"}, "blockblast": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clblockblast.html"}, "boxingrandom": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clboxingrandom.html"}, "burgers and frights": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clburgerandfrights.html"}, "cluster truck": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clclusterrush.html"}, "crossy road": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clcrossyroad.html"}, "deltarune": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cldeltarune.html"}, "doom": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cldoom.html"}, "doom 2": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cldoom2.html"}, "drive-mad": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cldrivemady.html"}, "ducklife1": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clducklife.html"}, "ducklife2": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clducklife2.html"}, "ducklife3": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clducklife3.html"}, "ducklife4": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clducklife4.html"}, "fancypantsadventures": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clfancypantsadventure.html"}, "fancypantsadventures2": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clfancypantsadventure2.html"}, "fancypantsadventures3": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clfancypantsadventure3.html"}, "fish.": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cltinyfishing.html"}, "fnac": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clfnac1.html"}, "fnac2": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clfnac2.html"}, "fnaf1": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clFNAF.html"}, "fnaf2": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clFNAF2.html"}, "fnaf3": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clFNAF3.html"}, "fnaf4": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clFNAF4.html"}, "geodash": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clgeometrydashscratch.html"}, "gunmayham": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clgunmayhem.html"}, "helltaker": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clHelltaker.html"}, "hobo1": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clhobo.html"}, "hobo2": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clhobo2.html"}, "hobo3": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clhobo3.html"}, "hobo4": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clhobo4.html"}, "hobo5": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clhobo5.html"}, "hobo6": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clhobo6.html"}, "hobo7": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clhobo7.html"}, "houseofhazards": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clhouseofhazards.html"}, "jetpack joy ride": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cljetpackjoyride.html"}, "minecraft": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clminecraft1-8-8.html"}, "minus3": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cltinyfishing.html"}, "minusB": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cldrivemady.html"}, "oneshot": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/cloneshotold.html"}, "papasburgeria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapasburgerIIIAAAAA.html"}, "papascheeseria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapascheeseria.html"}, "papasdonuteria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapadonut.html"}, "papasfreezeria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapasfreezeria.html"}, "papashotdoggeria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapashotdoggeria.html"}, "papaspancakeria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapaspancakeria.html"}, "papaspastaria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapaspastaria.html"}, "papaspizzeria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapapizzagood.html"}, "papassushiria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapassushiria.html"}, "papastacomia": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapastacomia.html"}, "papaswingeria": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clpapaswingeria.html"}, "vicecity": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile/UGS-Files/clgta.html"}, "riddleschool1": {"type": "cloud_swf", "url": "https://raw.githubusercontent.com/BinBashBanana/gstore/master/riddleschool1.swf"}, "riddleschool2": {"type": "cloud_swf", "url": "https://raw.githubusercontent.com/BinBashBanana/gstore/master/riddleschool2.swf"}, "riddleschool3": {"type": "cloud_swf", "url": "https://raw.githubusercontent.com/BinBashBanana/gstore/master/riddleschool3.swf"}, "riddleschool4": {"type": "cloud_swf", "url": "https://raw.githubusercontent.com/BinBashBanana/gstore/master/riddleschool4.swf"}, "riddleschool5": {"type": "cloud_swf", "url": "https://raw.githubusercontent.com/BinBashBanana/gstore/master/riddleschool5.swf"}, "riddletransfer1": {"type": "cloud_swf", "url": "https://raw.githubusercontent.com/BinBashBanana/gstore/master/riddletransfer.swf"}, "riddletransfer2": {"type": "cloud_swf", "url": "https://raw.githubusercontent.com/BinBashBanana/gstore/master/riddletransfer2.swf"}, "tattletail": {"type": "iframe", "url": "https://truffled.lol/games/tattletail/index.html"}, "bowmasters": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/iamtherealtux/html-gn@main/0.html"}, "ovo": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/iamtherealtux/html-gn@main/1-fde.html"}, "ovo2": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/iamtherealtux/html-gn@main/2e.html"}, "ovo3": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/iamtherealtux/html-gn@main/3-f.html"}, "gladihoppers": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/iamtherealtux/html-gn@main/4-pf.html"}, "sprunki": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/iamtherealtux/html-gn@main/9-f.html"}, "stickmanhook": {"type": "cloud_html", "url": "https://cdn.jsdelivr.net/gh/iamtherealtux/html-gn@main/11-f.html"}};
+
+    // State
+    let currentCategory = 'all';
+    let currentSearch = '';
+    let activeGame = null;
+    let isCheat100Active = false;
+
+    // Tab Cloaker implementation (like froggies.svg)
+    function setCloak(type) {
+      const titles = {
+        'none': 'BokitWare — Web Arcade & Real-Time Client',
+        'classroom': 'Classes',
+        'drive': 'My Drive - Google Drive',
+        'ixl': 'IXL | Math, Language Arts, Science, Social Studies, and Spanish',
+        'canvas': 'Dashboard',
+        'edpuzzle': 'Edpuzzle'
+      };
+      const favicons = {
+        'none': '',
+        'classroom': 'https://ssl.gstatic.com/classroom/favicon.png',
+        'drive': 'https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png',
+        'ixl': 'https://www.ixl.com/favicon.ico',
+        'canvas': 'https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico',
+        'edpuzzle': 'https://edpuzzle.imgix.net/favicons/favicon-32.png'
+      };
+
+      document.title = titles[type] || titles['none'];
+      let link = document.querySelector("link[rel*='icon']");
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'shortcut icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      if (favicons[type]) {
+        link.href = favicons[type];
+      }
+      try {
+        localStorage.setItem('bokit_cloak', type);
+      } catch(e) {}
+      showToast('Tab Cloak updated to: ' + (type === 'none' ? 'Default' : type));
+    }
+
+    document.querySelectorAll('[data-cloak]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setCloak(btn.getAttribute('data-cloak'));
+      });
+    });
+
+    try {
+      const savedCloak = localStorage.getItem('bokit_cloak');
+      if (savedCloak) setCloak(savedCloak);
+    } catch(e) {}
+
+    // Tab Navigation
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        const tab = btn.getAttribute('data-tab');
+        const panel = document.getElementById('view-' + tab);
+        if (panel) panel.classList.add('active');
+      });
+    });
+
+    // Populate Games Grid
+    function renderGames() {
+      const grid = document.getElementById('games-grid');
+      grid.innerHTML = '';
+
+      const filtered = ALL_GAMES.filter(g => {
+        const matchesCat = (currentCategory === 'all') || (g.category === currentCategory);
+        const matchesSearch = !currentSearch || g.title.toLowerCase().includes(currentSearch) || g.id.toLowerCase().includes(currentSearch);
+        return matchesCat && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:#64748b;">No games found matching your search.</div>';
+        return;
+      }
+
+      filtered.forEach(game => {
+        const card = document.createElement('div');
+        card.className = 'game-card';
+
+        let icon = '🎮';
+        if (game.id === 'tattletail') icon = '🧸';
+        else if (game.category === 'Riddle School') icon = '🏫';
+        else if (game.isPapas) icon = '👨‍🍳';
+        else if (game.category === 'Duck Life') icon = '🦆';
+        else if (game.category === 'Horror') icon = '🐻';
+        else if (game.category === 'Retro') icon = '🕹️';
+
+        const tagText = game.category === 'Riddle School' ? "Riddle" : (game.isPapas ? "Papa's" : (game.isFlash ? "Flash" : "HTML5"));
+        const tagClass = game.category === 'Riddle School' ? "riddle" : (game.isPapas ? "papas" : "");
+
+        card.innerHTML = `
+          <div class="game-thumb-wrapper">
+            <span class="game-placeholder-icon">${icon}</span>
+            <span class="game-tag-badge ${tagClass}">${tagText}</span>
+          </div>
+          <div class="game-info">
+            <div class="game-title" title="${game.title}">${game.title}</div>
+            <div class="game-category">${game.category}</div>
+            <button class="btn-play-card">▶ Play Game</button>
+          </div>
+        `;
+
+        card.addEventListener('click', () => launchGame(game));
+        grid.appendChild(card);
+      });
+    }
+
+    // Game Interstitial Preroll Ad Engine (Runs ONLY on game launch)
+    let interstitialTimer = null;
+    let onInterstitialFinished = null;
+
+    function showGameInterstitialAd(game, onComplete) {
+      const overlay = document.getElementById('game-interstitial-overlay');
+      const gameNameEl = document.getElementById('interstitial-game-name');
+      const timerLabel = document.getElementById('interstitial-timer-label');
+      const progressFill = document.getElementById('interstitial-progress-fill');
+      const skipBtn = document.getElementById('btn-skip-game-ad');
+
+      if (!overlay) {
+        if (typeof onComplete === 'function') onComplete();
+        return;
+      }
+
+      onInterstitialFinished = onComplete;
+      if (gameNameEl) gameNameEl.textContent = (game && game.title) ? game.title : 'Game';
+
+      overlay.style.display = 'flex';
+      if (skipBtn) {
+        skipBtn.disabled = true;
+        skipBtn.innerHTML = '<span>Skip in 3s...</span>';
+      }
+
+      // Direct Link handling & background impression
+      const directCard = document.getElementById('ad-direct-link-card');
+      const directLink = localStorage.getItem('monetag_direct') || 'https://omg10.com/4/11930399';
+      if (directCard && directLink) {
+        directCard.href = directLink;
+      }
+      if (skipBtn) {
+        skipBtn.disabled = false;
+        skipBtn.innerHTML = '<span>Skip Ad &rarr;</span>';
+      }
+      const bannerInjection = document.getElementById('monetag-banner-injection');
+      if (bannerInjection && directLink) {
+        bannerInjection.innerHTML = '<iframe src="' + directLink + '" style="display:none;width:0;height:0;border:0;"></iframe>';
+      }
+
+      // Monetag dynamic API trigger if loaded
+      try {
+        if (window.show_monetag_ad && typeof window.show_monetag_ad === 'function') {
+          window.show_monetag_ad();
+        }
+      } catch (e) {}
+
+      let timeLeft = 3;
+      if (progressFill) {
+        progressFill.style.transition = 'none';
+        progressFill.style.width = '100%';
+        setTimeout(() => {
+          if (progressFill) {
+            progressFill.style.transition = 'width 3s linear';
+            progressFill.style.width = '0%';
+          }
+        }, 50);
+      }
+
+      if (timerLabel) {
+        timerLabel.innerHTML = 'Sponsor opened in new tab &bull; Game starts in <strong>' + timeLeft + '</strong>s...';
+      }
+
+      if (interstitialTimer) clearInterval(interstitialTimer);
+      interstitialTimer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0 && timerLabel) {
+          timerLabel.innerHTML = 'Sponsor opened in new tab &bull; Game starts in <strong>' + timeLeft + '</strong>s...';
+        }
+        if (timeLeft <= 0) {
+          dismissGameInterstitial();
+        }
+      }, 1000);
+    }
+
+    function dismissGameInterstitial() {
+      if (interstitialTimer) {
+        clearInterval(interstitialTimer);
+        interstitialTimer = null;
+      }
+      const overlay = document.getElementById('game-interstitial-overlay');
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+      const cb = onInterstitialFinished;
+      onInterstitialFinished = null;
+      if (typeof cb === 'function') {
+        cb();
+      }
+    }
+
+    // Launch Game in Player - 100% Cloud CDN!
+    function launchGame(game) {
+      activeGame = game;
+      isCheat100Active = false;
+      const modal = document.getElementById('modal-game-player');
+      const titleEl = document.getElementById('player-title');
+      const frame = document.getElementById('game-frame');
+      const cheatBtn = document.getElementById('btn-toggle-cheat100');
+      const spinner = document.getElementById('player-loading-spinner');
+
+      // 🎯 Auto-open Monetag Direct Link sponsor in new tab upon game click
+      try {
+        const directUrl = localStorage.getItem('monetag_direct') || 'https://omg10.com/4/11930399';
+        if (directUrl) {
+          const adWin = window.open(directUrl, '_blank', 'noopener,noreferrer');
+          if (adWin) {
+            try { adWin.blur(); window.focus(); } catch (e) {}
+          }
+        }
+      } catch (err) {
+        console.warn('Direct link auto-open error:', err);
+      }
+
+      titleEl.textContent = game.title + ' (' + game.category + ')';
+
+      if (game.isPapas) {
+        cheatBtn.style.display = 'inline-flex';
+        cheatBtn.textContent = '✨ 100% Score Cheat';
+      } else {
+        cheatBtn.style.display = 'none';
+      }
+
+      modal.classList.add('active');
+      spinner.style.display = 'none'; // Don't show spinner while ad runs
+      frame.removeAttribute('srcdoc');
+      frame.src = 'about:blank';
+
+      // 🎯 STRICT GAME-ONLY AD: Interstitial preroll ad runs ONLY when launching a game!
+      showGameInterstitialAd(game, () => {
+        loadGameIntoFrame(game);
+      });
+    }
+
+    function patchGameHtml(rawHtml, sourceUrl) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(rawHtml, 'text/html');
+
+      // Remove third-party ad containers and trackers
+      doc.querySelectorAll('#sidebarad1, #sidebarad2, .ad-banner, ins.adsbygoogle').forEach(el => el.remove());
+
+      // If sourceUrl is supplied and the doc doesn't have a <base> tag, inject one
+      // so all relative script tags (<script src="...">), styles, wasm, and images
+      // resolve directly to the original site or scripts!
+      if (sourceUrl && !doc.querySelector('base')) {
+        const base = doc.createElement('base');
+        base.href = new URL('./', sourceUrl).href;
+        if (doc.head) {
+          doc.head.insertBefore(base, doc.head.firstChild);
+        } else {
+          const head = doc.createElement('head');
+          head.appendChild(base);
+          doc.documentElement.insertBefore(head, doc.body || null);
+        }
+      }
+
+      return "<!doctype html>" + doc.documentElement.outerHTML;
+    }
+
+    function loadGameIntoFrame(game) {
+      const frame = document.getElementById('game-frame');
+      const spinner = document.getElementById('player-loading-spinner');
+      const spinnerLabel = document.getElementById('spinner-label');
+
+      spinner.style.display = 'flex';
+      spinner.style.opacity = '1';
+      spinnerLabel.textContent = 'Loading ' + game.title + ' from Cloud CDN...';
+
+      const entry = CLOUD_GAMES[game.id];
+      if (!entry) {
+        spinner.style.display = 'none';
+        showToast('Game configuration not found.');
+        return;
+      }
+
+      if (entry.type === 'iframe') {
+        frame.removeAttribute('srcdoc');
+        frame.src = entry.url;
+        frame.onload = () => {
+          spinner.style.opacity = '0';
+          setTimeout(() => spinner.style.display = 'none', 300);
+        };
+      } else if (entry.type === 'cloud_html') {
+        // Fetch raw HTML from original site / CDN, patch scripts, and load from a Blob URL
+        fetch(entry.url)
+          .then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.text();
+          })
+          .then(rawHtml => {
+            const patched = patchGameHtml(rawHtml, entry.url);
+
+            // 🚀 Create Blob URL so game executes with proper browsing context and scripts
+            const blob = new Blob([patched], { type: 'text/html' });
+            const blobUrl = URL.createObjectURL(blob);
+
+            frame.removeAttribute('srcdoc');
+            frame.onload = () => {
+              spinner.style.opacity = '0';
+              setTimeout(() => spinner.style.display = 'none', 300);
+              URL.revokeObjectURL(blobUrl);
+            };
+            frame.src = blobUrl;
+          })
+          .catch(err => {
+            console.warn('Blob fetch failed, falling back to direct iframe src:', err);
+            frame.removeAttribute('srcdoc');
+            frame.src = entry.url;
+            spinner.style.opacity = '0';
+            setTimeout(() => spinner.style.display = 'none', 300);
+          });
+      } else if (entry.type === 'cloud_swf') {
+        // Clean container Ruffle player for direct SWF execution via Blob URL
+        const swfHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escapeHtml(game.title)}</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html, body { width:100%; height:100%; background:#090b10; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+    ruffle-player { width:100% !important; height:100% !important; }
+  </style>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"><\/script>
+</head>
+<body>
+  <div id="container" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"></div>
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+      letterbox: "on",
+      autoplay: "on",
+      splashScreen: false,
+      unmuteOverlay: "hidden",
+      upgradeToHttps: false,
+      warnOnUnsupportedContent: false,
+      contextMenu: "rightClick"
+    };
+    window.addEventListener("DOMContentLoaded", () => {
+      const ruffle = window.RufflePlayer.newest ? window.RufflePlayer.newest() : window.RufflePlayer;
+      const player = ruffle.createPlayer();
+      player.id = "ruffle-player";
+      document.getElementById("container").appendChild(player);
+      player.load("${entry.url}").catch(err => console.error("Ruffle load error:", err));
+    });
+  <\/script>
+</body>
+</html>`;
+        const blob = new Blob([swfHtml], { type: 'text/html' });
+        const blobUrl = URL.createObjectURL(blob);
+        frame.removeAttribute('srcdoc');
+        frame.onload = () => {
+          spinner.style.opacity = '0';
+          setTimeout(() => spinner.style.display = 'none', 300);
+          URL.revokeObjectURL(blobUrl);
+        };
+        frame.src = blobUrl;
+      }
+    }
+
+    // Close Player
+    document.getElementById('btn-close-player').addEventListener('click', closePlayer);
+
+    function closePlayer() {
+      dismissGameInterstitial();
+      const modal = document.getElementById('modal-game-player');
+      const frame = document.getElementById('game-frame');
+      frame.src = 'about:blank';
+      frame.removeAttribute('srcdoc');
+      modal.classList.remove('active');
+      activeGame = null;
+    }
+
+    // Reload Player
+    document.getElementById('btn-player-reload').addEventListener('click', () => {
+      if (activeGame) launchGame(activeGame);
+    });
+
+    // Toggle 100% Cheat for Papa's Games
+    document.getElementById('btn-toggle-cheat100').addEventListener('click', () => {
+      if (!activeGame || !activeGame.isPapas) return;
+      isCheat100Active = !isCheat100Active;
+      const btn = document.getElementById('btn-toggle-cheat100');
+      const frame = document.getElementById('game-frame');
+
+      if (isCheat100Active) {
+        btn.textContent = '🌟 100% CHEAT ACTIVE 🌟';
+        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        showToast('✨ 100% Cheat Activated for ' + activeGame.title + '!');
+        
+        try {
+          frame.contentWindow.postMessage({ action: 'toggle100Cheat' }, '*');
+          if (frame.contentWindow.toggle100PercentCheat) {
+            frame.contentWindow.toggle100PercentCheat();
+          }
+        } catch(e) {}
+      } else {
+        btn.textContent = '✨ 100% Score Cheat';
+        btn.style.background = 'linear-gradient(135deg, #f59e0b, #d97706)';
+        showToast('Standard mode restored.');
+      }
+    });
+
+    // Fullscreen Toggle
+    document.getElementById('btn-fullscreen-player').addEventListener('click', () => {
+      const container = document.querySelector('.player-iframe-container');
+      if (!document.fullscreenElement) {
+        container.requestFullscreen().catch(err => console.error(err));
+      } else {
+        document.exitFullscreen().catch(err => console.error(err));
+      }
+    });
+
+    // Categories filter clicks
+    document.querySelectorAll('.cat-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentCategory = pill.getAttribute('data-cat');
+        renderGames();
+      });
+    });
+
+    // Search input
+    document.getElementById('game-search-input').addEventListener('input', (e) => {
+      currentSearch = e.target.value.toLowerCase().trim();
+      renderGames();
+    });
+
+    // Standalone Mock Chat
+    document.getElementById('btn-mock-send').addEventListener('click', sendMockMessage);
+    document.getElementById('mock-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') sendMockMessage();
+    });
+
+    function sendMockMessage() {
+      const input = document.getElementById('mock-input');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+
+      const container = document.getElementById('mock-msg-container');
+      const msg = document.createElement('div');
+      msg.className = 'mock-msg';
+      msg.innerHTML = `
+        <div class="mock-avatar" style="background:linear-gradient(135deg, #3b82f6, #06b6d4)">U</div>
+        <div class="mock-msg-content">
+          <div class="mock-msg-author">You <span style="font-size:11px;color:#64748b;font-weight:400;">Just now</span></div>
+          <div class="mock-msg-text">${escapeHtml(text)}</div>
+        </div>
+      `;
+      container.appendChild(msg);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // jsDelivr Link Generator
+    function updateJsDelivrLink() {
+      const user = document.getElementById('gh-user-input').value.trim() || 'bokit-bip';
+      const repo = document.getElementById('gh-repo-input').value.trim() || 'somuuuu';
+      const branch = document.getElementById('gh-branch-input').value.trim() || 'main';
+
+      const url = `https://cdn.jsdelivr.net/gh/${user}/${repo}@${branch}/jsdelivr-svg/bokitcord.svg`;
+      document.getElementById('jsdelivr-direct-link').textContent = url;
+    }
+
+    ['gh-user-input', 'gh-repo-input', 'gh-branch-input'].forEach(id => {
+      document.getElementById(id).addEventListener('input', updateJsDelivrLink);
+    });
+
+    document.getElementById('btn-copy-jsdelivr').addEventListener('click', () => {
+      const url = document.getElementById('jsdelivr-direct-link').textContent;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('📋 jsDelivr Link Copied to Clipboard!');
+      });
+    });
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-msg');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    // Monetag Ad & Site Verification Engine
+    function initMonetag() {
+      const savedCode = localStorage.getItem('monetag_code') || '98b1c435253398ca0a5c3b6750837cab';
+      const savedZone = localStorage.getItem('monetag_zone') || '';
+      const savedDirect = localStorage.getItem('monetag_direct') || '';
+
+      const codeInput = document.getElementById('monetag-input-tag');
+      const zoneInput = document.getElementById('monetag-input-zone');
+      const directInput = document.getElementById('monetag-input-direct');
+      const metaTag = document.getElementById('monetag-meta-tag');
+
+      if (codeInput) codeInput.value = savedCode;
+      if (zoneInput) zoneInput.value = savedZone;
+      if (directInput) directInput.value = savedDirect;
+      if (metaTag && savedCode) metaTag.setAttribute('content', savedCode);
+
+      if (savedZone) {
+        injectMonetagScript(savedZone);
+      }
+    }
+
+    function injectMonetagScript(zoneOrUrl) {
+      if (!zoneOrUrl) return;
+      const clean = zoneOrUrl.trim();
+      let scriptUrl = clean;
+      if (!clean.startsWith('http')) {
+        scriptUrl = 'https://alwingulla.com/88/tag.min.js';
+      }
+      if (!document.querySelector('script[src="' + scriptUrl + '"]')) {
+        const s = document.createElement('script');
+        s.src = scriptUrl;
+        s.async = true;
+        s.setAttribute('data-zone', clean);
+        document.head.appendChild(s);
+      }
+    }
+
+    const btnSaveMonetag = document.getElementById('btn-save-monetag');
+    if (btnSaveMonetag) {
+      btnSaveMonetag.addEventListener('click', () => {
+        const code = document.getElementById('monetag-input-tag').value.trim();
+        const zone = document.getElementById('monetag-input-zone').value.trim();
+        const direct = document.getElementById('monetag-input-direct').value.trim();
+
+        if (code) {
+          localStorage.setItem('monetag_code', code);
+          const metaTag = document.getElementById('monetag-meta-tag');
+          if (metaTag) metaTag.setAttribute('content', code);
+        }
+        localStorage.setItem('monetag_zone', zone);
+        localStorage.setItem('monetag_direct', direct);
+
+        if (zone) injectMonetagScript(zone);
+        showToast('💾 Monetag Ad Settings Saved & Verification Meta Updated!');
+      });
+    }
+
+    const btnPreviewAd = document.getElementById('btn-preview-game-ad');
+    if (btnPreviewAd) {
+      btnPreviewAd.addEventListener('click', () => {
+        launchGame({ id: 'blockblast', title: 'Ad Test Preview', category: 'Action', isFlash: false, isPapas: false });
+      });
+    }
+
+    const btnSkipAd = document.getElementById('btn-skip-game-ad');
+    if (btnSkipAd) {
+      btnSkipAd.addEventListener('click', () => {
+        dismissGameInterstitial();
+      });
+    }
+
+    // Legal Modals handlers
+    const modalPrivacy = document.getElementById('modal-privacy');
+    const modalTerms = document.getElementById('modal-terms');
+
+    function openModal(m) { if (m) m.style.display = 'flex'; }
+    function closeModal(m) { if (m) m.style.display = 'none'; }
+
+    const btnOpenPrivacy = document.getElementById('btn-open-privacy');
+    if (btnOpenPrivacy) btnOpenPrivacy.addEventListener('click', () => openModal(modalPrivacy));
+    const btnClosePrivacy = document.getElementById('btn-close-privacy');
+    if (btnClosePrivacy) btnClosePrivacy.addEventListener('click', () => closeModal(modalPrivacy));
+    const btnGotItPrivacy = document.getElementById('btn-got-it-privacy');
+    if (btnGotItPrivacy) btnGotItPrivacy.addEventListener('click', () => closeModal(modalPrivacy));
+    const backdropPrivacy = document.getElementById('backdrop-privacy');
+    if (backdropPrivacy) backdropPrivacy.addEventListener('click', () => closeModal(modalPrivacy));
+
+    const btnOpenTerms = document.getElementById('btn-open-terms');
+    if (btnOpenTerms) btnOpenTerms.addEventListener('click', () => openModal(modalTerms));
+    const btnCloseTerms = document.getElementById('btn-close-terms');
+    if (btnCloseTerms) btnCloseTerms.addEventListener('click', () => closeModal(modalTerms));
+    const btnGotItTerms = document.getElementById('btn-got-it-terms');
+    if (btnGotItTerms) btnGotItTerms.addEventListener('click', () => closeModal(modalTerms));
+    const backdropTerms = document.getElementById('backdrop-terms');
+    if (backdropTerms) backdropTerms.addEventListener('click', () => closeModal(modalTerms));
+
+    const btnOpenMonetag = document.getElementById('btn-open-monetag');
+    if (btnOpenMonetag) {
+      btnOpenMonetag.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+        const sTab = document.querySelector('.tab-btn[data-tab="settings"]');
+        const sView = document.getElementById('view-settings');
+        if (sTab) sTab.classList.add('active');
+        if (sView) {
+          sView.classList.add('active');
+          const mCard = document.getElementById('monetag-card');
+          if (mCard) mCard.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Initial setup
+    renderGames();
+    updateJsDelivrLink();
+    initMonetag();
+  </script>
+</body>
+</html>
