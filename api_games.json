@@ -1,0 +1,572 @@
+[
+  {
+    "id": "10minutestilldawn",
+    "name": "10 Minutes Till Dawn",
+    "folder": "10minutestilldawn",
+    "url": "/games/10minutestilldawn/index.html",
+    "coverUrl": "/games/10minutestilldawn/cover.jpg",
+    "type": "Roguelike Action",
+    "icon": "\u23f3",
+    "description": "Survive a horde of endless Lovecraftian monsters for 10 minutes in this intense roguelike shooter."
+  },
+  {
+    "id": "Arthur's Nightmare",
+    "name": "Arthur's Nightmare",
+    "folder": "Arthur's Nightmare",
+    "url": "/games/Arthur's Nightmare/index.html",
+    "coverUrl": "/games/Arthur's Nightmare/cover.png",
+    "type": "Survival Horror",
+    "icon": "\ud83d\udc53",
+    "description": "Survive the night in Arthur's house while avoiding the terrifying cursed Aardvark family in this viral indie parody horror game by Varun Ramesh."
+  },
+  {
+    "id": "bad time simulator",
+    "name": "Bad Time Simulator (Sans Fight)",
+    "folder": "bad time simulator",
+    "url": "/games/bad time simulator/index.html",
+    "coverUrl": "/games/bad time simulator/cover.png",
+    "type": "Boss Fight Action",
+    "icon": "\ud83d\udc80",
+    "description": "Face off against Sans in this legendary recreation of Undertale's ultimate Genocide run boss battle! Dodge bone attacks, platforms, and Gaster Blasters."
+  },
+  {
+    "id": "baldis-basics",
+    "name": "Baldi's Basics",
+    "folder": "baldis-basics",
+    "url": "/games/baldis-basics/index.html",
+    "coverUrl": "/games/baldis-basics/cover.jpg",
+    "type": "Survival Horror",
+    "icon": "\ud83d\udcd0",
+    "description": "The classic 90s edutainment parody horror game. Collect all 7 notebooks and escape the schoolhouse!"
+  },
+  {
+    "id": "basket random",
+    "name": "Basket Random",
+    "folder": "basket random",
+    "url": "/games/basket random/index.html",
+    "coverUrl": "/games/basket random/cover.jpg",
+    "type": "Ragdoll Physics",
+    "icon": "\ud83c\udfc0",
+    "description": "Hilarious 2-player physics-based ragdoll basketball! Jump, steal, and dunk with wacky controls across changing courts."
+  },
+  {
+    "id": "basketballstars",
+    "name": "Basketball Stars",
+    "folder": "basketballstars",
+    "url": "/games/basketballstars/index.html",
+    "coverUrl": "/games/basketballstars/cover.png",
+    "type": "2-Player Sports",
+    "icon": "\ud83c\udfc0",
+    "description": "Play solo or 1v1 against friends! Choose your favorite legendary basketball stars, shoot three-pointers, and execute thunderous slam dunks."
+  },
+  {
+    "id": "blockblast",
+    "name": "Block Blast!",
+    "folder": "blockblast",
+    "url": "/games/blockblast/index.html",
+    "coverUrl": "/games/blockblast/cover.png",
+    "type": "Puzzle Strategy",
+    "icon": "\ud83e\uddf1",
+    "description": "Place block shapes on the 8x8 grid to clear rows and columns and score massive combo streaks!"
+  },
+  {
+    "id": "boxingrandom",
+    "name": "Boxing Random",
+    "folder": "boxingrandom",
+    "url": "/games/boxingrandom/index.html",
+    "coverUrl": "/games/boxingrandom/cover.jpg",
+    "type": "Ragdoll Physics",
+    "icon": "\ud83e\udd4a",
+    "description": "Hilarious physics-based 2-player ragdoll boxing. Jump, punch, and knock out your opponent through changing arenas!"
+  },
+  {
+    "id": "burgers and frights",
+    "name": "Burgers & Frights",
+    "folder": "burgers and frights",
+    "url": "/games/burgers and frights/index.html",
+    "coverUrl": "/games/burgers and frights/cover.png",
+    "type": "Psychological Horror",
+    "icon": "\ud83c\udf54",
+    "description": "Ride your bicycle through a pitch-black forest road at night to get a burger in this atmospheric PS1-style retro horror game by Donitz."
+  },
+  {
+    "id": "cluster truck",
+    "name": "Clustertruck",
+    "folder": "cluster truck",
+    "url": "/games/cluster truck/index.html",
+    "coverUrl": "/games/cluster truck/cover.jpg",
+    "type": "Physics Platformer",
+    "icon": "\ud83d\ude9a",
+    "description": "The chaotic first-person platformer on top of speeding trucks! Leap across unpredictable highway traffic where the floor is literally lava."
+  },
+  {
+    "id": "crossy road",
+    "name": "Crossy Road",
+    "folder": "crossy road",
+    "url": "/games/crossy road/index.html",
+    "coverUrl": "/games/crossy road/cover.png",
+    "type": "Endless Arcade",
+    "icon": "\ud83d\udc14",
+    "description": "Why did the chicken cross the road? Dodge high-speed traffic, hop across rushing train tracks, and leap over floating river logs in this endless arcade hit."
+  },
+  {
+    "id": "deltarune",
+    "name": "DELTARUNE (Chapters 1-5)",
+    "folder": "deltarune",
+    "url": "/games/deltarune/index.html",
+    "coverUrl": "/games/deltarune/cover.jpg",
+    "type": "RPG Adventure",
+    "icon": "\u2764\ufe0f",
+    "description": "Toby Fox's legendary follow-up to Undertale. Journey into the Dark World with Kris, Susie, and Ralsei across Chapters 1 through 5!"
+  },
+  {
+    "id": "doom",
+    "name": "DOOM (1993)",
+    "folder": "doom",
+    "url": "/games/doom/index.html",
+    "coverUrl": "/games/doom/cover.jpg",
+    "type": "Retro FPS Action",
+    "icon": "\ud83d\udc79",
+    "description": "The legendary 1993 id Software masterpiece. Battle your way through hordes of demons on Phobos with classic weapons and music!"
+  },
+  {
+    "id": "doom 2",
+    "name": "DOOM II: Hell on Earth",
+    "folder": "doom 2",
+    "url": "/games/doom 2/index.html",
+    "coverUrl": "/games/doom 2/cover.jpg",
+    "type": "Retro FPS Action",
+    "icon": "\ud83d\udc79",
+    "description": "The legendary 1994 id Software classic. Earth has been overrun by demon hordes\u2014grab your Super Shotgun and blast your way through Hell on Earth!"
+  },
+  {
+    "id": "drive-mad",
+    "name": "Drive Mad",
+    "folder": "drive-mad",
+    "url": "/games/drive-mad/index.html",
+    "coverUrl": "/games/drive-mad/cover.jpg",
+    "type": "Physics Driving",
+    "icon": "\ud83c\udfce\ufe0f",
+    "description": "High-octane physics-based stunt driving game. Race over wild obstacles without flipping over!"
+  },
+  {
+    "id": "ducklife1",
+    "name": "Duck Life",
+    "folder": "ducklife1",
+    "url": "/games/ducklife1/index.html",
+    "coverUrl": "/games/ducklife1/cover.jpg",
+    "type": "Training / Simulation",
+    "icon": "\ud83e\udd86",
+    "description": "Train your duckling in running, flying, and swimming to win races and save the farm in the original Flash classic!"
+  },
+  {
+    "id": "ducklife2",
+    "name": "Duck Life 2: World Champion",
+    "folder": "ducklife2",
+    "url": "/games/ducklife2/index.html",
+    "coverUrl": "/games/ducklife2/cover.jpg",
+    "type": "Sports / Racing",
+    "icon": "\ud83c\udfc6",
+    "description": "Compete around the world to become the ultimate duck champion! Train running, flying, swimming, and the all-new climbing skill."
+  },
+  {
+    "id": "ducklife3",
+    "name": "Duck Life 3: Evolution",
+    "folder": "ducklife3",
+    "url": "/games/ducklife3/index.html",
+    "coverUrl": "/games/ducklife3/cover.jpg",
+    "type": "Genetics / Racing",
+    "icon": "\ud83e\uddec",
+    "description": "Choose from 4 genetically modified duck breeds! Train your duck, evolve through Amateur to Professional leagues, and conquer tournaments."
+  },
+  {
+    "id": "ducklife4",
+    "name": "Duck Life 4",
+    "folder": "ducklife4",
+    "url": "/games/ducklife4/index.html",
+    "coverUrl": "/games/ducklife4/cover.jpg",
+    "type": "Open-World RPG",
+    "icon": "\ud83c\udf0b",
+    "description": "Embark on a massive adventure across 6 distinct regions from Grassland to Volcano! Train your duck flock, beat rival champions, and claim the trophy."
+  },
+  {
+    "id": "fancypantsadventures",
+    "name": "The Fancy Pants Adventures: World 1",
+    "folder": "fancypantsadventures",
+    "url": "/games/fancypantsadventures/index.html",
+    "coverUrl": "/games/fancypantsadventures/cover.jpg",
+    "type": "Classic Platformer",
+    "icon": "\ud83d\udc56",
+    "description": "Brad Borne's legendary fast-paced Flash platformer! Run, slide, and wall-jump through Squiggleville in your iconic fancy yellow pants."
+  },
+  {
+    "id": "fancypantsadventures2",
+    "name": "The Fancy Pants Adventures: World 2",
+    "folder": "fancypantsadventures2",
+    "url": "/games/fancypantsadventures2/index.html",
+    "coverUrl": "/games/fancypantsadventures2/cover.jpg",
+    "type": "Classic Platformer",
+    "icon": "\ud83d\udc56",
+    "description": "The beloved World 2 sequel! Help the Fancy Pants Man recover an ice cream cone stolen by an angry rabbit across 6 massive levels."
+  },
+  {
+    "id": "fancypantsadventures3",
+    "name": "The Fancy Pants Adventures: World 3",
+    "folder": "fancypantsadventures3",
+    "url": "/games/fancypantsadventures3/index.html",
+    "coverUrl": "/games/fancypantsadventures3/cover.jpg",
+    "type": "Classic Platformer",
+    "icon": "\ud83d\udc56",
+    "description": "World 3 brings combat with pencils, swimming, and epic pirate battles across the high seas to Squiggleville!"
+  },
+  {
+    "id": "fish.",
+    "name": "FISH",
+    "folder": "fish.",
+    "url": "/games/fish./index.html",
+    "coverUrl": "/games/fish./cover.png",
+    "type": "2D Action Platformer",
+    "icon": "\ud83d\udc1f",
+    "description": "A hilarious, action-packed 2D run-and-gun platformer where you play as a fish with a gun."
+  },
+  {
+    "id": "fnac",
+    "name": "Five Nights at Candy's",
+    "folder": "fnac",
+    "url": "/games/fnac/index.html",
+    "coverUrl": "/games/fnac/cover.webp",
+    "type": "Survival Horror",
+    "icon": "\ud83d\udc31",
+    "description": "Survive the night shift at Candy's Burgers and Fries in this legendary Five Nights at Freddy's fan classic."
+  },
+  {
+    "id": "fnac2",
+    "name": "Five Nights at Candy's 2",
+    "folder": "fnac2",
+    "url": "/games/fnac2/index.html",
+    "coverUrl": "/games/fnac2/cover.webp",
+    "type": "Survival Horror",
+    "icon": "\ud83e\udd16",
+    "description": "Return to the abandoned warehouse with new mechanics, cameras, and withered animatronics in FNAC 2."
+  },
+  {
+    "id": "fnaf1",
+    "name": "Five Nights at Freddy's",
+    "folder": "fnaf1",
+    "url": "/games/fnaf1/index.html",
+    "coverUrl": "/games/fnaf1/cover.jpg",
+    "type": "Survival Horror",
+    "icon": "\ud83d\udc3b",
+    "description": "Welcome to your new summer job at Freddy Fazbear's Pizza. Monitor the security cameras and conserve power to survive five nights."
+  },
+  {
+    "id": "fnaf2",
+    "name": "Five Nights at Freddy's 2",
+    "folder": "fnaf2",
+    "url": "/games/fnaf2/index.html",
+    "coverUrl": "/games/fnaf2/cover.jpg",
+    "type": "Survival Horror",
+    "icon": "\ud83d\udc30",
+    "description": "Back with a new cast of characters, the Freddy mask, flashlight, and the music box. Survive the night shift at the new Freddy's!"
+  },
+  {
+    "id": "fnaf3",
+    "name": "Five Nights at Freddy's 3",
+    "folder": "fnaf3",
+    "url": "/games/fnaf3/index.html",
+    "coverUrl": "/games/fnaf3/cover.jpg",
+    "type": "Survival Horror",
+    "icon": "\ud83d\udd73\ufe0f",
+    "description": "Thirty years after Freddy Fazbear's Pizza closed, Fazbear's Fright brings the horror to life with Springtrap and audio lures."
+  },
+  {
+    "id": "fnaf4",
+    "name": "Five Nights at Freddy's 4",
+    "folder": "fnaf4",
+    "url": "/games/fnaf4/index.html",
+    "coverUrl": "/games/fnaf4/cover.jpg",
+    "type": "Survival Horror",
+    "icon": "\ud83d\udeaa",
+    "description": "The final chapter in the original story. Defend yourself in your bedroom against Nightmare Freddy, Bonnie, Chica, and Foxy."
+  },
+  {
+    "id": "geodash",
+    "name": "Geometry Dash",
+    "folder": "geodash",
+    "url": "/games/geodash/index.html",
+    "coverUrl": "/games/geodash/cover.jpg",
+    "type": "Rhythm Platformer",
+    "icon": "\ud83d\udd37",
+    "description": "Jump and fly your way through danger in this rhythm-based action platformer. Push your skills to the limit as you leap through treacherous obstacles!"
+  },
+  {
+    "id": "gunmayham",
+    "name": "Gun Mayhem",
+    "folder": "gunmayham",
+    "url": "/games/gunmayham/index.html",
+    "coverUrl": "/games/gunmayham/cover.jpg",
+    "type": "Action Arena Shooter",
+    "icon": "\ud83d\udd2b",
+    "description": "Legendary arena platform shooter! Battle AI or friends, unlock dozens of crazy weapons, and blast enemies off the stage."
+  },
+  {
+    "id": "helltaker",
+    "name": "Helltaker",
+    "folder": "helltaker",
+    "url": "/games/helltaker/index.html",
+    "coverUrl": "/games/helltaker/cover.jpg",
+    "type": "Puzzle Adventure",
+    "icon": "\ud83e\udd5e",
+    "description": "Short puzzle adventure game about sharply dressed demon girls. Descend into hell for pancakes!"
+  },
+  {
+    "id": "hobo1",
+    "name": "Hobo",
+    "folder": "hobo1",
+    "url": "/games/hobo1/index.html",
+    "coverUrl": "/games/hobo1/cover.jpg",
+    "type": "Beat 'Em Up / Classic",
+    "icon": "\ud83e\udd4a",
+    "description": "The legendary classic Flash beat 'em up! Wake up in the city dump, brawl against pedestrians and cops, and unlock filthy combos."
+  },
+  {
+    "id": "hobo2",
+    "name": "Hobo 2: Prison Brawl",
+    "folder": "hobo2",
+    "url": "/games/hobo2/index.html",
+    "coverUrl": "/games/hobo2/cover.jpg",
+    "type": "Beat 'Em Up / Action",
+    "icon": "\ud83d\udd12",
+    "description": "Locked up in maximum security! Battle your way through inmates and riot police to bust out of prison."
+  },
+  {
+    "id": "hobo3",
+    "name": "Hobo 3: Wanted",
+    "folder": "hobo3",
+    "url": "/games/hobo3/index.html",
+    "coverUrl": "/games/hobo3/cover.jpg",
+    "type": "Beat 'Em Up / Action",
+    "icon": "\ud83d\ude94",
+    "description": "Hobo is now a fugitive on the run! The entire police department is hunting you across city streets, sewers, and rooftops."
+  },
+  {
+    "id": "hobo4",
+    "name": "Hobo 4: Total War",
+    "folder": "hobo4",
+    "url": "/games/hobo4/index.html",
+    "coverUrl": "/games/hobo4/cover.jpg",
+    "type": "Beat 'Em Up / War Action",
+    "icon": "\ud83c\udf96\ufe0f",
+    "description": "The military has been deployed to stop Hobo! Brawl against elite soldiers, tanks, and helicopters using weapons and wild combos."
+  },
+  {
+    "id": "hobo5",
+    "name": "Hobo 5: Space Brawls",
+    "folder": "hobo5",
+    "url": "/games/hobo5/index.html",
+    "coverUrl": "/games/hobo5/cover.jpg",
+    "type": "Beat 'Em Up / Sci-Fi",
+    "icon": "\ud83d\udc7d",
+    "description": "Abducted into deep space! Aliens cloned an army of Hobos\u2014fight your way through UFOs and reclaim your stolen combos."
+  },
+  {
+    "id": "hobo6",
+    "name": "Hobo 6: Hell",
+    "folder": "hobo6",
+    "url": "/games/hobo6/index.html",
+    "coverUrl": "/games/hobo6/cover.jpg",
+    "type": "Beat 'Em Up / Supernatural",
+    "icon": "\ud83d\udd25",
+    "description": "Descend into the fiery pits of the underworld! Fight through demon hordes and take the battle straight to Satan himself."
+  },
+  {
+    "id": "hobo7",
+    "name": "Hobo 7: Heaven",
+    "folder": "hobo7",
+    "url": "/games/hobo7/index.html",
+    "coverUrl": "/games/hobo7/cover.jpg",
+    "type": "Beat 'Em Up / Finale",
+    "icon": "\u2601\ufe0f",
+    "description": "The epic finale of the Hobo saga. Ascend to the pearly gates, brawl through angels, and confront the creator in Heaven!"
+  },
+  {
+    "id": "houseofhazards",
+    "name": "House of Hazards",
+    "folder": "houseofhazards",
+    "url": "/games/houseofhazards/index.html",
+    "coverUrl": "/games/houseofhazards/cover.png",
+    "type": "Multiplayer Party",
+    "icon": "\u26a0\ufe0f",
+    "description": "Hilarious local multiplayer party game. Complete household chores while other players activate dangerous traps against you!"
+  },
+  {
+    "id": "jetpack joy ride",
+    "name": "Jetpack Joyride",
+    "folder": "jetpack joy ride",
+    "url": "/games/jetpack joy ride/index.html",
+    "coverUrl": "/games/jetpack joy ride/cover.png",
+    "type": "Endless Runner",
+    "icon": "\ud83d\ude80",
+    "description": "Bullet-powered jetpacks! Giant mechanical dragons! Help Barry Steakfries break into a secret laboratory and dodge lasers, zappers, and guided missiles."
+  },
+  {
+    "id": "minecraft",
+    "name": "Minecraft (Eaglercraft 1.12.2)",
+    "folder": "minecraft",
+    "url": "/games/minecraft/index.html",
+    "coverUrl": "/games/minecraft/cover.png",
+    "type": "Sandbox Adventure",
+    "icon": "\u26cf\ufe0f",
+    "description": "Play real Minecraft 1.12.2 directly in your browser with full singleplayer and multiplayer server support!"
+  },
+  {
+    "id": "minus3",
+    "name": "-3",
+    "folder": "minus3",
+    "url": "/games/minus3/index.html",
+    "coverUrl": "/games/minus3/cover.png",
+    "type": "Baldi Mod / WebGL",
+    "icon": "\ud83d\udd79\ufe0f",
+    "description": "Surreal, fast-paced Baldi mod by Mauzer2137. Challenge your math and reflexes in -3!"
+  },
+  {
+    "id": "minusB",
+    "name": "-B",
+    "folder": "minusB",
+    "url": "/games/minusB/index.html",
+    "coverUrl": "/games/minusB/cover.png",
+    "type": "Baldi Mod / WebGL",
+    "icon": "\ud83d\udcd0",
+    "description": "The intense surreal Baldi mod sequel by Bermud. Test your math, survival, and reflexes in -B!"
+  },
+  {
+    "id": "oneshot",
+    "name": "OneShot Legacy",
+    "folder": "oneshot",
+    "url": "/games/oneshot/index.html",
+    "coverUrl": "/games/oneshot/cover.jpg",
+    "type": "Story Adventure",
+    "icon": "\ud83d\udca1",
+    "description": "A surreal top-down puzzle adventure game where you guide Niko through a mysterious decaying world."
+  },
+  {
+    "id": "papasburgeria",
+    "name": "Papa's Burgeria",
+    "folder": "papasburgeria",
+    "url": "/games/papasburgeria/index.html",
+    "coverUrl": "/games/papasburgeria/cover.jpg",
+    "type": "Restaurant / Cooking",
+    "icon": "\ud83c\udf54",
+    "description": "Flip juicy burger patties, stack toppings to order, and serve hungry customers in the legendary Papa's Burgeria!"
+  },
+  {
+    "id": "papascheeseria",
+    "name": "Papa's Cheeseria",
+    "folder": "papascheeseria",
+    "url": "/games/papascheeseria/index.html",
+    "coverUrl": "/games/papascheeseria/cover.jpg",
+    "type": "Restaurant / Cooking",
+    "icon": "\ud83e\uddc0",
+    "description": "Craft towering grilled cheese sandwiches loaded with artisan breads, melted cheeses, and savory fillings, paired with seasoned fries in Toastwood!"
+  },
+  {
+    "id": "papasdonuteria",
+    "name": "Papa's Donuteria",
+    "folder": "papasdonuteria",
+    "url": "/games/papasdonuteria/index.html",
+    "coverUrl": "/games/papasdonuteria/cover.jpg",
+    "type": "Restaurant / Bakery",
+    "icon": "\ud83c\udf69",
+    "description": "Roll out dough, fry golden donuts, pipe decadent cream fillings, and drizzle icing and sprinkles for amusement park visitors at Powder Point!"
+  },
+  {
+    "id": "papasfreezeria",
+    "name": "Papa's Freezeria",
+    "folder": "papasfreezeria",
+    "url": "/games/papasfreezeria/index.html",
+    "coverUrl": "/games/papasfreezeria/cover.jpg",
+    "type": "Restaurant / Desserts",
+    "icon": "\ud83c\udf67",
+    "description": "Mix delicious freezer sundaes, blend syrups, and pile on whipped cream and cherries at the Calypso Island resort!"
+  },
+  {
+    "id": "papashotdoggeria",
+    "name": "Papa's Hot Doggeria",
+    "folder": "papashotdoggeria",
+    "url": "/games/papashotdoggeria/index.html",
+    "coverUrl": "/games/papashotdoggeria/cover.jpg",
+    "type": "Sports / Cooking",
+    "icon": "\ud83c\udf2d",
+    "description": "Take charge of the best stadium concession stand at Grilling Stadium! Grill juicy hot dogs, pop sodas, and serve fresh ballpark popcorn."
+  },
+  {
+    "id": "papaspancakeria",
+    "name": "Papa's Pancakeria",
+    "folder": "papaspancakeria",
+    "url": "/games/papaspancakeria/index.html",
+    "coverUrl": "/games/papaspancakeria/cover.jpg",
+    "type": "Restaurant / Breakfast",
+    "icon": "\ud83e\udd5e",
+    "description": "Cook fluffy pancakes, golden waffles, and French toast stacks topped with butter, fruit, and warm maple syrup in Maple Mountain!"
+  },
+  {
+    "id": "papaspastaria",
+    "name": "Papa's Pastaria",
+    "folder": "papaspastaria",
+    "url": "/games/papaspastaria/index.html",
+    "coverUrl": "/games/papaspastaria/cover.jpg",
+    "type": "Restaurant / Italian",
+    "icon": "\ud83c\udf5d",
+    "description": "Boil al dente pastas, ladel gourmet Italian sauces, and toast fresh garlic bread at your picturesque canal-side trattoria in Portallini!"
+  },
+  {
+    "id": "papaspizzeria",
+    "name": "Papa's Pizzeria",
+    "folder": "papaspizzeria",
+    "url": "/games/papaspizzeria/index.html",
+    "coverUrl": "/games/papaspizzeria/cover.jpg",
+    "type": "Restaurant / Cooking",
+    "icon": "\ud83c\udf55",
+    "description": "The original cooking sensation that started it all! Take orders, top pizzas, bake them to perfection, and cut precise slices."
+  },
+  {
+    "id": "papassushiria",
+    "name": "Papa's Sushiria",
+    "folder": "papassushiria",
+    "url": "/games/papassushiria/index.html",
+    "coverUrl": "/games/papassushiria/cover.jpg",
+    "type": "Restaurant / Asian",
+    "icon": "\ud83c\udf63",
+    "description": "Cook nori rice, place fresh salmon and veggies, roll tight sushi maki, slice cleanly, and brew custom bubble teas in Sakura Bay!"
+  },
+  {
+    "id": "papastacomia",
+    "name": "Papa's Taco Mia!",
+    "folder": "papastacomia",
+    "url": "/games/papastacomia/index.html",
+    "coverUrl": "/games/papastacomia/cover.jpg",
+    "type": "Restaurant / Cooking",
+    "icon": "\ud83c\udf2e",
+    "description": "Winner of the taco eating contest? Congratulations, you now run the restaurant! Grill seasoned meats, build tacos, and serve chips & dip."
+  },
+  {
+    "id": "papaswingeria",
+    "name": "Papa's Wingeria",
+    "folder": "papaswingeria",
+    "url": "/games/papaswingeria/index.html",
+    "coverUrl": "/games/papaswingeria/cover.jpg",
+    "type": "Restaurant / Fast Food",
+    "icon": "\ud83c\udf57",
+    "description": "Deep-fry crispy chicken wings, toss them in savory signature sauces, and arrange sides neatly on platters for picky patrons in Starlight City!"
+  },
+  {
+    "id": "vicecity",
+    "name": "Grand Theft Auto: Vice City",
+    "folder": "vicecity",
+    "url": "/games/vicecity/index.html",
+    "coverUrl": "/games/vicecity/cover.jpg",
+    "type": "Open World Action",
+    "icon": "\ud83c\udf34",
+    "description": "Welcome to Vice City in 1986. Play Tommy Vercetti climbing to the top of the criminal underworld in this legendary open-world classic."
+  }
+]
